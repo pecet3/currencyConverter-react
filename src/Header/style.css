@@ -1,0 +1,21 @@
+.header {
+    margin: 30px auto;
+    padding: 10px;
+    max-width: 330px;
+    border-radius: 10px;
+    background-color: hsl(34, 78%, 85%);
+    background-image: url("../images/header_background.jpg");
+    background-attachment: fixed;
+    background-position: 50% 100%;
+    border: 1px solid;
+
+}
+
+.header__title {
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    margin: 0 auto;
+    text-shadow: 1px 2px rgb(246 255 229);
+    text-rendering: geometricPrecision;
+    outline: 1px solid
+}

@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Header"
+import Section from "./Section"
+import Main from "./Main"
+import Form from "./Form"
+import FinalAmount from "./FinalAmount"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header title="Kalkulator Walut"/>
+    <Main>
+    <Section content = "Witaj w prostym kalkulatorze walut stworzonym na potrzeby nauki
+        frontendu. Z czasem planuję go rozwijać dodając kolejne waluty oraz
+        integrację z API Narodowego Banku Polskiego. Baw się dobrze i mam
+        nadzieję, że podawanę kwoty będą wysokie 😎. "/>
+
+    <Section content = {<Form /> }/>
+    <Section content = {<FinalAmount />} extraClass="section__finalAmount" />
+    </Main>
+    </>
+
+
   );
 }
 
