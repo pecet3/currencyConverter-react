@@ -28,8 +28,8 @@ const Form = () => {
             </div>
             <div className="form__containerElement">
               <label className="form__label form__label--radio">
-                <input type="radio" name="operationType" value="toPLN" className="js-operationFromPLN form__radio" />PLN
-                <input type="radio" name="operationType" value="fromPLN" className="js-operationToPLN form__radio"
+                <input type="radio" name="operationType" value="toPLN" className="form__radio" />PLN
+                <input type="radio" name="operationType" value="fromPLN" className="form__radio"
                   checked /><span className="js-FormCurrencyField">EUR</span>
               </label>
             </div>

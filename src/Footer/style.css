@@ -1,0 +1,8 @@
+.footer {
+    max-width: 170px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    margin: 10px auto;
+    font-size: 12px;
+    border: 1px solid;
+}
