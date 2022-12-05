@@ -42,6 +42,7 @@ function App() {
     content = 
     {<FinalAmount
       firstAmount = {firstAmount}
+      typeCurrency={typeCurrency}
 
        />}
     extraClass="section--finalAmount"
