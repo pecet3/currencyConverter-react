@@ -44,7 +44,7 @@ const Form = ({ typeCurrency, onSelectChange, onClick, onInputChange, firstAmoun
                   name="operationType"
                   className="form__radio"
                   onChange={onRadioChange}
-                  checked={intoPLN}
+                  checked={fromPLN}
                 />
                 PLN
                 <input
@@ -52,7 +52,7 @@ const Form = ({ typeCurrency, onSelectChange, onClick, onInputChange, firstAmoun
                   name="operationType"
                   className="form__radio"
                   onChange={onRadioChange}
-                  checked={fromPLN}
+                  checked={intoPLN}
                 />
                 <span>{typeCurrency}</span>
               </label>

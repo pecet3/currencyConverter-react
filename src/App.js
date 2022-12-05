@@ -57,7 +57,7 @@ function App() {
     {<FinalAmount
       firstAmount = {firstAmount}
       typeCurrency= {typeCurrency}
-
+      intoPLN= {intoPLN}
        />}
     extraClass="section--finalAmount"
     />
