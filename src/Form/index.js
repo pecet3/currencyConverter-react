@@ -1,6 +1,6 @@
 import "./style.css"
 
-const Form = ({typeCurrency, onSelectChange, onClick, firstAmount}) => {
+const Form = ({typeCurrency, onSelectChange, onClick, onInputChange, firstAmount}) => {
 
   return (
     <>
@@ -48,8 +48,9 @@ const Form = ({typeCurrency, onSelectChange, onClick, firstAmount}) => {
                 <div className="form__containerElement">
                   <span className="form__labelText">Ilość:</span>
                 </div>
-                <div className="form__containerElement"><input type="number" className="form__field" min="0.00"
-                    step="0.01" value={firstAmount} /></div>
+                <div className="form__containerElement">
+                  <input type="number" className="form__field" min="0.00"
+                    step="0.01" value={firstAmount} onChange={onInputChange} /></div>
               </div>
             </label>
           </p>

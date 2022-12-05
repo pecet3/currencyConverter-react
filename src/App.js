@@ -14,13 +14,10 @@ function App() {
 
   const onSelectChange = ({target}) => {setTypeCurrency(target.value)};
 
-  const toggleFirstAmount = ()  => {
-    setFirstAmount(firstAmount.value);
-  };
+  const onInputChange = ({target})  => {setFirstAmount(target.value);};
 
 
   const onClick = () => {
-    toggleFirstAmount();
     console.log(typeCurrency)
   };
   return (
@@ -32,12 +29,15 @@ function App() {
         integrację z API Narodowego Banku Polskiego. Baw się dobrze i mam
         nadzieję, że podawanę kwoty będą wysokie 😎. "/>
 
-    <Section content = {<Form 
+    <Section 
+    content = {<Form 
     typeCurrency={typeCurrency}
     onSelectChange={onSelectChange}
     onClick={onClick}
+    onInputChange={onInputChange}
     firstAmount = {firstAmount}
-    /> }/>
+    /> }
+    />
     <Section 
     content = 
     {<FinalAmount
