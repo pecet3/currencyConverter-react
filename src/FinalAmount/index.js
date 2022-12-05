@@ -1,9 +1,9 @@
 import "./style.css"
 
-const FinalAmount = () => (
+const FinalAmount = ({firstAmount}) => (
     <div>
     <p>
-      <strong className="section__currencyField">0.00 EUR </strong>
+      <strong className="section__currencyField">{firstAmount}</strong>
       jest warte:
       <strong className="section__resultField"> 0.00 PLN</strong>
     </p>

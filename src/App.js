@@ -4,8 +4,25 @@ import Main from "./Main"
 import Form from "./Form"
 import FinalAmount from "./FinalAmount"
 import Footer from "./Footer"
+import {useState} from "react" 
 
 function App() {
+  const [typeCurrency, setTypeCurrency] = useState("EUR");
+  const [firstAmount, setFirstAmount] = useState(0);
+  const [finalAmount, setFinalAmount] = useState(0);
+
+
+  const onSelectChange = ({target}) => {setTypeCurrency(target.value)};
+
+  const toggleFirstAmount = ()  => {
+    setFirstAmount(firstAmount.value);
+  };
+
+
+  const onClick = () => {
+    toggleFirstAmount();
+    console.log(typeCurrency)
+  };
   return (
     <>
     <Header title="Kalkulator walut"/>
@@ -15,10 +32,22 @@ function App() {
         integrację z API Narodowego Banku Polskiego. Baw się dobrze i mam
         nadzieję, że podawanę kwoty będą wysokie 😎. "/>
 
-    <Section content = {<Form /> }/>
-    <Section content = {<FinalAmount />} extraClass="section--finalAmount" />
+    <Section content = {<Form 
+    typeCurrency={typeCurrency}
+    onSelectChange={onSelectChange}
+    onClick={onClick}
+    firstAmount = {firstAmount}
+    /> }/>
+    <Section 
+    content = 
+    {<FinalAmount
+      firstAmount = {firstAmount}
+
+       />}
+    extraClass="section--finalAmount"
+    />
     </Main>
-    <Footer />
+    <Footer/>
     </>
 
 
