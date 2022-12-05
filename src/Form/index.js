@@ -11,7 +11,8 @@ const Form = ({ typeCurrency, onSelectChange, onClick, onInputChange, firstAmoun
           <p>
             <div className="form__container">
               <span className="form__labelText">Waluta:</span>
-              <select className="form__field"
+              <select 
+              className="form__field"
                 name="currency"
                 value={typeCurrency}
                 onChange={onSelectChange}>
@@ -19,7 +20,7 @@ const Form = ({ typeCurrency, onSelectChange, onClick, onInputChange, firstAmoun
                 <option className="form__option" value="USD">
                   Dolar Amerykański
                 </option>
-                <option className="form__option" value="EUR" select>Euro</option>
+                <option className="form__option" value="EUR" select = "true">Euro</option>
                 <option className="form__option" value="GBP">Funt Angielski</option>
               </select>
             </div>

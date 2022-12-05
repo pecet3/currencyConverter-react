@@ -10,6 +10,7 @@ function App() {
   const [typeCurrency, setTypeCurrency] = useState("EUR");
   const [firstAmount, setFirstAmount] = useState(0);
   const [finalAmount, setFinalAmount] = useState(0);
+
   const [fromPLN, setFromPLN] = useState(true);
   const [intoPLN, setIntoPLN] = useState(false);
 
@@ -34,10 +35,10 @@ function App() {
     <>
     <Header title="Kalkulator walut"/>
     <Main>
-    <Section content = "Witaj w prostym kalkulatorze walut stworzonym na potrzeby nauki
-        frontendu. Z czasem planuję go rozwijać dodając kolejne waluty oraz
+    <Section content = "Witaj w prostym kalkulatorze walut stworzonym na potrzeby nauki frontendu.
+        Z czasem planuję go rozwijać dodając kolejne waluty oraz
         integrację z API Narodowego Banku Polskiego. Baw się dobrze i mam
-        nadzieję, że podawanę kwoty będą wysokie 😎. "/>
+        nadzieję, że podawanę kwoty będą wysokie 😎."/>
 
     <Section 
     content = {<Form 
