@@ -10,15 +10,25 @@ function App() {
   const [typeCurrency, setTypeCurrency] = useState("EUR");
   const [firstAmount, setFirstAmount] = useState(0);
   const [finalAmount, setFinalAmount] = useState(0);
+  const [fromPLN, setFromPLN] = useState(true);
+  const [intoPLN, setIntoPLN] = useState(false);
 
 
   const onSelectChange = ({target}) => {setTypeCurrency(target.value)};
 
-  const onInputChange = ({target})  => {setFirstAmount(target.value);};
+  const onInputChange = ({target})  => {setFirstAmount(target.value)};
+
+  const onRadioChange = () => {
+    setIntoPLN(fromPLN => !fromPLN) 
+    setFromPLN(intoPLN => !intoPLN)
+  };
+
+ 
 
 
   const onClick = () => {
-    console.log(typeCurrency)
+    console.log(fromPLN);
+    console.log(intoPLN);
   };
   return (
     <>
@@ -31,18 +41,21 @@ function App() {
 
     <Section 
     content = {<Form 
-    typeCurrency={typeCurrency}
-    onSelectChange={onSelectChange}
-    onClick={onClick}
-    onInputChange={onInputChange}
+    typeCurrency= {typeCurrency}
+    onSelectChange= {onSelectChange}
+    onClick= {onClick}
+    onInputChange= {onInputChange}
     firstAmount = {firstAmount}
+    onRadioChange= {onRadioChange}
+    fromPLN= {fromPLN}
+    intoPLN= {intoPLN}
     /> }
     />
     <Section 
     content = 
     {<FinalAmount
       firstAmount = {firstAmount}
-      typeCurrency={typeCurrency}
+      typeCurrency= {typeCurrency}
 
        />}
     extraClass="section--finalAmount"

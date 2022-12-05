@@ -1,29 +1,31 @@
 import "./style.css"
 
-const Form = ({typeCurrency, onSelectChange, onClick, onInputChange, firstAmount}) => {
+const Form = ({ typeCurrency, onSelectChange, onClick, onInputChange, firstAmount, onRadioChange, fromPLN, intoPLN }) => {
 
   return (
     <>
-    <form className="form" onClick = {onClick}>
+      <form className="form" onClick={onClick}>
+
         <fieldset className="form__fieldset">
           <legend className="form__legend">Wybierz walutę do obliczeń</legend>
           <p>
-          <div className="form__container">
-            <span className="form__labelText">Waluta:</span>
-            <select className="form__field" 
-            name="currency"
-            value = {typeCurrency}
-            onChange = {onSelectChange}>
+            <div className="form__container">
+              <span className="form__labelText">Waluta:</span>
+              <select className="form__field"
+                name="currency"
+                value={typeCurrency}
+                onChange={onSelectChange}>
 
-              <option className="form__option" value="USD">
-                Dolar Amerykański
-              </option>
-              <option className="form__option" value="EUR" select>Euro</option>
-              <option className="form__option" value="GBP">Funt Angielski</option>
-            </select>
-          </div>
+                <option className="form__option" value="USD">
+                  Dolar Amerykański
+                </option>
+                <option className="form__option" value="EUR" select>Euro</option>
+                <option className="form__option" value="GBP">Funt Angielski</option>
+              </select>
+            </div>
           </p>
         </fieldset>
+
         <fieldset className="form__fieldset">
           <legend className="form__legend">
             Wpisz swój kapitał do przeliczenia
@@ -32,13 +34,26 @@ const Form = ({typeCurrency, onSelectChange, onClick, onInputChange, firstAmount
             <div className="form__containerElement">
               <span className="form__labelText form__labelText--curency">
                 Jaką walutę posiadasz?
-                </span>
+              </span>
             </div>
             <div className="form__containerElement">
               <label className="form__label form__label--radio">
-                <input type="radio" name="operationType" value="toPLN" className="form__radio" />PLN
-                <input type="radio" name="operationType" value="fromPLN" className="form__radio"
-                  checked /><span>{typeCurrency}</span>
+                <input
+                  type="radio"
+                  name="operationType"
+                  className="form__radio"
+                  onChange={onRadioChange}
+                  checked={intoPLN}
+                />
+                PLN
+                <input
+                  type="radio"
+                  name="operationType"
+                  className="form__radio"
+                  onChange={onRadioChange}
+                  checked={fromPLN}
+                />
+                <span>{typeCurrency}</span>
               </label>
             </div>
           </div>
@@ -58,7 +73,7 @@ const Form = ({typeCurrency, onSelectChange, onClick, onInputChange, firstAmount
 
         <p className="form__textDataInfo">kursy pochodzą z dnia 21.11.2022</p>
       </form>
-      </>
+    </>
   )
 
 };
