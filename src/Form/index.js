@@ -4,7 +4,7 @@ const Form = ({ typeCurrency, onSelectChange, onChange, onInputChange, firstAmou
 
   return (
     <>
-      <form className="form" onChange={onChange}>
+      <form className="form" onSubmit={onChange}>
 
         <fieldset className="form__fieldset">
           <legend className="form__legend">Wybierz walutę do obliczeń</legend>
@@ -73,8 +73,10 @@ const Form = ({ typeCurrency, onSelectChange, onChange, onInputChange, firstAmou
             </label>
           </p>
         </fieldset>
-
-        <p className="form__textDataInfo">kursy pochodzą z dnia 06.12.2022</p>
+        <p className="form__textDataInfo">*kursy pochodzą z dnia 06.12.2022</p>
+        <div className="form__containerButton">
+        <button className= "form__submitButton">Policz Wynik</button>
+        </div>
       </form>
     </>
   )
