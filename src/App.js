@@ -20,16 +20,50 @@ function App() {
   const onInputChange = ({target})  => {setFirstAmount(target.value)};
 
   const onRadioChange = () => {
-    setIntoPLN(fromPLN => !fromPLN) 
-    setFromPLN(intoPLN => !intoPLN)
+    setIntoPLN(intoPLN => !intoPLN) 
+    setFromPLN(fromPLN => !fromPLN)
   };
 
- 
+  const recognizeThenInit = () => {
+    const rateEUR = 4.69;
+    const rateGBP = 5.44;
+    const rateUSD = 4.48;
+
+    if (intoPLN) {
+      switch (typeCurrency) {
+        case "USD":
+          return calculateIntoPLN(firstAmount, rateUSD);
+        case "EUR":
+          return calculateIntoPLN(firstAmount, rateEUR);
+        case "GBP":
+          return calculateIntoPLN(firstAmount, rateGBP);
+      }
+    } else if (fromPLN) {
+      switch (typeCurrency) {
+        case "USD":
+          return calculateFromPLN(firstAmount, rateUSD);
+        case "EUR":
+          return calculateFromPLN(firstAmount, rateEUR);
+        case "GBP":
+          return calculateFromPLN(firstAmount, rateGBP);
+      }
+    }
+  };
+
+  const calculateIntoPLN = (amount, rate) => {
+    setFinalAmount(amount * rate)
+  };
+
+  const calculateFromPLN = (amount, rate) => {
+    setFinalAmount(amount / rate)
+  };
 
 
-  const onClick = () => {
-    console.log(fromPLN);
-    console.log(intoPLN);
+
+
+  const onChange = (event) => {
+    event.preventDefault();
+    recognizeThenInit();
   };
   return (
     <>
@@ -41,15 +75,16 @@ function App() {
         nadzieję, że podawanę kwoty będą wysokie 😎."/>
 
     <Section 
-    content = {<Form 
-    typeCurrency= {typeCurrency}
-    onSelectChange= {onSelectChange}
-    onClick= {onClick}
-    onInputChange= {onInputChange}
-    firstAmount = {firstAmount}
-    onRadioChange= {onRadioChange}
-    fromPLN= {fromPLN}
-    intoPLN= {intoPLN}
+    content = 
+      {<Form 
+        typeCurrency= {typeCurrency}
+        onSelectChange= {onSelectChange}
+        onChange= {onChange}
+        onInputChange= {onInputChange}
+        firstAmount = {firstAmount}
+        onRadioChange= {onRadioChange}
+        fromPLN= {fromPLN}
+        intoPLN= {intoPLN}
     /> }
     />
     <Section 
@@ -58,6 +93,7 @@ function App() {
       firstAmount = {firstAmount}
       typeCurrency= {typeCurrency}
       intoPLN= {intoPLN}
+      finalAmount = {finalAmount}
        />}
     extraClass="section--finalAmount"
     />
