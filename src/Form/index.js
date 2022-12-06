@@ -1,10 +1,10 @@
 import "./style.css"
 
-const Form = ({ typeCurrency, onSelectChange, onClick, onInputChange, firstAmount, onRadioChange, fromPLN, intoPLN }) => {
+const Form = ({ typeCurrency, onSelectChange, onChange, onInputChange, firstAmount, onRadioChange, fromPLN, intoPLN }) => {
 
   return (
     <>
-      <form className="form" onChange={onClick}>
+      <form className="form" onChange={onChange}>
 
         <fieldset className="form__fieldset">
           <legend className="form__legend">Wybierz walutę do obliczeń</legend>
@@ -74,7 +74,7 @@ const Form = ({ typeCurrency, onSelectChange, onClick, onInputChange, firstAmoun
           </p>
         </fieldset>
 
-        <p className="form__textDataInfo">kursy pochodzą z dnia 21.11.2022</p>
+        <p className="form__textDataInfo">kursy pochodzą z dnia 06.12.2022</p>
       </form>
     </>
   )
