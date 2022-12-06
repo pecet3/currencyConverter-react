@@ -1,10 +1,10 @@
 import "./style.css"
 
-const Form = ({ typeCurrency, onSelectChange, onChange, onInputChange, firstAmount, onRadioChange, fromPLN, intoPLN }) => {
+const Form = ({ typeCurrency, onSelectChange, onSubmitForm, onInputChange, firstAmount, onRadioChange, fromPLN, intoPLN }) => {
 
   return (
     <>
-      <form className="form" onSubmit={onChange}>
+      <form className="form" onSubmit={onSubmitForm}>
 
         <fieldset className="form__fieldset">
           <legend className="form__legend">Wybierz walutę do obliczeń</legend>
@@ -60,7 +60,6 @@ const Form = ({ typeCurrency, onSelectChange, onChange, onInputChange, firstAmou
               </label>
             </div>
           </div>
-          <p>
             <label className="form__label">
               <div className="form__container">
                 <div className="form__containerElement">
@@ -68,14 +67,14 @@ const Form = ({ typeCurrency, onSelectChange, onChange, onInputChange, firstAmou
                 </div>
                 <div className="form__containerElement">
                   <input type="number" className="form__field" min="0.00"
-                    step="0.01" value={firstAmount} onChange={onInputChange} /></div>
+                    step="0.01" value={firstAmount} onChange={onInputChange} />
+                    </div>
+                    <button className= "form__submitButton">Policz Wynik</button>
               </div>
             </label>
-          </p>
         </fieldset>
         <p className="form__textDataInfo">*kursy pochodzą z dnia 06.12.2022</p>
         <div className="form__containerButton">
-        <button className= "form__submitButton">Policz Wynik</button>
         </div>
       </form>
     </>

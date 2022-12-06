@@ -61,10 +61,11 @@ function App() {
 
 
 
-  const onChange = (event) => {
+  const onSubmitForm = (event) => {
     event.preventDefault();
     recognizeThenInit();
   };
+
   return (
     <>
     <Header title="Kalkulator walut"/>
@@ -79,7 +80,7 @@ function App() {
       {<Form 
         typeCurrency= {typeCurrency}
         onSelectChange= {onSelectChange}
-        onChange= {onChange}
+        onSubmitForm = {onSubmitForm}
         onInputChange= {onInputChange}
         firstAmount = {firstAmount}
         onRadioChange= {onRadioChange}

@@ -25,7 +25,7 @@
     background-color: rgb(212, 212, 212);
     border: 2px double rgb(192, 192, 192);
     border-radius: 5px;
-    width: 200px
+    width: 200px;
 }
 
 .form__labelText {
@@ -64,6 +64,7 @@
 .form__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 767px) {
@@ -76,10 +77,6 @@
     }
 }
 
-.form__container--currency {
-    margin-bottom: 10px;
-}
-
 .form__containerElement {
     align-self: center;
 }
@@ -88,10 +85,29 @@
     display: flex;
     justify-content: center;
 }
+
 .form__submitButton {
-   padding: 10px 25px;
-   border: none;
-   background-color: hsl(34, 48%, 74%);
-   border-radius: 5px;
-   color:rgb(0, 0, 0);
+    width: 200px;
+    padding: 10px;
+    border: none;
+    background-color: hsl(34, 48%, 74%);
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    transition: .5s;
+    margin-left: 10px;
+
+}
+
+.form__submitButton:hover {
+    cursor: pointer;
+    background-color: hsl(34, 48%, 70%);
+    transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+    .form__submitButton {
+        margin-left: 0;
+        margin-top: 10px;
+        grid-column-start: 2;
+    }
 }
