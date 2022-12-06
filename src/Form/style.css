@@ -52,6 +52,10 @@
     margin: 0 auto;
 }
 
+.form__radioElement {
+    margin-right: 5px;
+}
+
 .form__container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

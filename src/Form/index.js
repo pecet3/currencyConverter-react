@@ -4,7 +4,7 @@ const Form = ({ typeCurrency, onSelectChange, onClick, onInputChange, firstAmoun
 
   return (
     <>
-      <form className="form" onClick={onClick}>
+      <form className="form" onChange={onClick}>
 
         <fieldset className="form__fieldset">
           <legend className="form__legend">Wybierz walutę do obliczeń</legend>
@@ -39,22 +39,24 @@ const Form = ({ typeCurrency, onSelectChange, onClick, onInputChange, firstAmoun
             </div>
             <div className="form__containerElement">
               <label className="form__label form__label--radio">
+                <span className="form__radioElement">
                 <input
                   type="radio"
                   name="operationType"
-                  className="form__radio"
-                  onChange={onRadioChange}
-                  checked={fromPLN}
-                />
-                PLN
-                <input
-                  type="radio"
-                  name="operationType"
-                  className="form__radio"
                   onChange={onRadioChange}
                   checked={intoPLN}
                 />
-                <span>{typeCurrency}</span>
+                PLN
+                </span>
+                <span className="form__radioElement">
+                <input
+                  type="radio"
+                  name="operationType"
+                  onChange={onRadioChange}
+                  checked={fromPLN}
+                />
+                {typeCurrency}
+                </span>
               </label>
             </div>
           </div>
