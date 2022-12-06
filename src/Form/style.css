@@ -75,6 +75,7 @@
     .form__container--currency {
         grid-template-columns: 1fr 200px;
     }
+   
 }
 
 .form__containerElement {
@@ -87,7 +88,7 @@
 }
 
 .form__submitButton {
-    width: 200px;
+    max-width: 200px;
     padding: 10px;
     border: none;
     background-color: hsl(34, 48%, 74%);
