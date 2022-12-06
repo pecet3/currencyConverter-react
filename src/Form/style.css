@@ -1,5 +1,5 @@
 .form {
-    margin: 20px auto;
+    margin: auto;
 }
 
 .form__legend {
@@ -32,7 +32,7 @@
     display: inline-block;
     max-width: 150px;
     width: 100%;
-    margin-right: 5px;
+    margin-right: 0;
     padding: 10px;
     font-size: 18px;
 }
@@ -52,9 +52,9 @@
 
 
 .form__label--radio {
-    max-width: 30px;
     text-align: center;
     margin: 0 auto;
+    
 }
 
 .form__radioElement {
@@ -73,9 +73,18 @@
     }
 
     .form__container--currency {
-        grid-template-columns: 1fr 200px;
+        grid-template-columns: 1fr 1fr;
+    }    
+}
+
+@media(max-width: 320px){ 
+    .form__container {
+        grid-template-columns: 1fr;
     }
-   
+
+    .form__container--currency {
+        grid-template-columns: 1fr;
+    }  
 }
 
 .form__containerElement {
@@ -110,5 +119,11 @@
         margin-left: 0;
         margin-top: 10px;
         grid-column-start: 2;
+    }
+}
+
+@media (max-width: 320px) {
+    .form__submitButton {
+        grid-column-start: 1;
     }
 }
