@@ -67,7 +67,7 @@ const Form = ({ typeCurrency, onSelectChange, onSubmitForm, onInputChange, first
                 </div>
                 <div className="form__containerElement">
                   <input type="number" className="form__field" min="0.00"
-                    step="0.01" value={firstAmount} onChange={onInputChange} />
+                    step="0.01" value={firstAmount} onChange={onInputChange}/>
                     </div>
                     <button className= "form__submitButton">Policz Wynik</button>
               </div>
