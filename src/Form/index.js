@@ -11,8 +11,8 @@ const Form = ({ typeCurrency, onSelectChange, onSubmitForm, onInputChange, first
           <p>
             <div className="form__container">
               <span className="form__labelText">Waluta:</span>
-              <select 
-              className="form__field"
+              <select
+                className="form__field"
                 name="currency"
                 value={typeCurrency}
                 onChange={onSelectChange}>
@@ -20,7 +20,7 @@ const Form = ({ typeCurrency, onSelectChange, onSubmitForm, onInputChange, first
                 <option className="form__option" value="USD">
                   Dolar Amerykański
                 </option>
-                <option className="form__option" value="EUR" select = "true">Euro</option>
+                <option className="form__option" value="EUR" select="true">Euro</option>
                 <option className="form__option" value="GBP">Funt Angielski</option>
               </select>
             </div>
@@ -40,38 +40,38 @@ const Form = ({ typeCurrency, onSelectChange, onSubmitForm, onInputChange, first
             <div className="form__containerElement">
               <label className="form__label form__label--radio">
                 <span className="form__radioElement">
-                <input
-                  type="radio"
-                  name="operationType"
-                  onChange={onRadioChange}
-                  checked={intoPLN}
-                />
-                PLN
+                  <input
+                    type="radio"
+                    name="operationType"
+                    onChange={onRadioChange}
+                    checked={intoPLN}
+                  />
+                  PLN
                 </span>
                 <span className="form__radioElement">
-                <input
-                  type="radio"
-                  name="operationType"
-                  onChange={onRadioChange}
-                  checked={fromPLN}
-                />
-                {typeCurrency}
+                  <input
+                    type="radio"
+                    name="operationType"
+                    onChange={onRadioChange}
+                    checked={fromPLN}
+                  />
+                  {typeCurrency}
                 </span>
               </label>
             </div>
           </div>
-            <label className="form__label">
-              <div className="form__container">
-                <div className="form__containerElement">
-                  <span className="form__labelText">Ilość:</span>
-                </div>
-                <div className="form__containerElement">
-                  <input type="number" className="form__field" min="0.00"
-                    step="0.01" value={firstAmount} onChange={onInputChange}/>
-                    </div>
-                    <button className= "form__submitButton">Policz Wynik</button>
+          <label className="form__label">
+            <div className="form__container">
+              <div className="form__containerElement">
+                <span className="form__labelText">Ilość:</span>
               </div>
-            </label>
+              <div className="form__containerElement">
+                <input type="number" className="form__field" min="0.00"
+                  step="0.01" value={firstAmount} onChange={onInputChange} />
+              </div>
+              <button className="form__submitButton">Policz Wynik</button>
+            </div>
+          </label>
         </fieldset>
         <p className="form__textDataInfo">*kursy pochodzą z dnia 06.12.2022</p>
         <div className="form__containerButton">
