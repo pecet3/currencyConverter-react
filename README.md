@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# Currency Converter React
+
+Hi, this is a React implementation of the [currency-converter-PLN-](https://github.com/pecet3/currency-converter-PLN-) I made in JavaScript Vanilla recently.
+The main difference is the addition of a submit button. The result  changes when you press it.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
