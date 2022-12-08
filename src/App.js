@@ -11,9 +11,9 @@ function App() {
   const [typeCurrency, setTypeCurrency] = useState(currencies[0].short);
   const [firstAmount, setFirstAmount] = useState(0);
   const [finalAmount, setFinalAmount] = useState(0);
-  const [intoPLN, setIntoPLN] = useState(false);
+  const [intoPLN, setIntoPLN] = useState(true);
 
-  console.log(currencies[0].short)
+
 
   return (
     <>

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./style.css"
 
-const Form = ( {firstAmount, typeCurrency, intoPLN, setTypeCurrency, setFirstAmount, setFinalAmount, setIntoPLN }) => {
+const Form = ( {firstAmount, typeCurrency, intoPLN, setTypeCurrency, setFirstAmount, setFinalAmount,setIntoPLN }) => {
 
-  const [fromPLN, setFromPLN] = useState(true);
+  const [fromPLN, setFromPLN] = useState(false);
 
 
   const onSelectChange = ({target}) => {setTypeCurrency(target.value)};
@@ -96,7 +96,7 @@ const Form = ( {firstAmount, typeCurrency, intoPLN, setTypeCurrency, setFirstAmo
                     type="radio"
                     name="operationType"
                     onChange={onRadioChange}
-                    checked={intoPLN}
+                    checked={fromPLN}
                   />
                   PLN
                 </span>
@@ -105,7 +105,7 @@ const Form = ( {firstAmount, typeCurrency, intoPLN, setTypeCurrency, setFirstAmo
                     type="radio"
                     name="operationType"
                     onChange={onRadioChange}
-                    checked={fromPLN}
+                    checked={intoPLN}
                   />
                   {typeCurrency}
                 </span>
