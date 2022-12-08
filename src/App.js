@@ -5,66 +5,15 @@ import Form from "./Form"
 import FinalAmount from "./FinalAmount"
 import Footer from "./Footer"
 import {useState} from "react" 
+import currencies from "./currencies.js"
 
 function App() {
-  const [typeCurrency, setTypeCurrency] = useState("EUR");
+  const [typeCurrency, setTypeCurrency] = useState(currencies[0].short);
   const [firstAmount, setFirstAmount] = useState(0);
   const [finalAmount, setFinalAmount] = useState(0);
-
-  const [fromPLN, setFromPLN] = useState(true);
   const [intoPLN, setIntoPLN] = useState(false);
 
-
-  const onSelectChange = ({target}) => {setTypeCurrency(target.value)};
-
-  const onInputChange = ({target})  => {setFirstAmount(target.value)};
-
-  const onRadioChange = () => {
-    setIntoPLN(intoPLN => !intoPLN) 
-    setFromPLN(fromPLN => !fromPLN)
-  };
-
-  const recognizeThenInit = () => {
-    const rateEUR = 4.69;
-    const rateGBP = 5.44;
-    const rateUSD = 4.48;
-
-    if (intoPLN) {
-      switch (typeCurrency) {
-        case "USD":
-          return calculateIntoPLN(firstAmount, rateUSD);
-        case "EUR":
-          return calculateIntoPLN(firstAmount, rateEUR);
-        case "GBP":
-          return calculateIntoPLN(firstAmount, rateGBP);
-      }
-    } else if (fromPLN) {
-      switch (typeCurrency) {
-        case "USD":
-          return calculateFromPLN(firstAmount, rateUSD);
-        case "EUR":
-          return calculateFromPLN(firstAmount, rateEUR);
-        case "GBP":
-          return calculateFromPLN(firstAmount, rateGBP);
-      }
-    }
-  };
-
-  const calculateIntoPLN = (amount, rate) => {
-    setFinalAmount(amount * rate)
-  };
-
-  const calculateFromPLN = (amount, rate) => {
-    setFinalAmount(amount / rate)
-  };
-
-
-
-
-  const onSubmitForm = (event) => {
-    event.preventDefault();
-    recognizeThenInit();
-  };
+  console.log(currencies[0].short)
 
   return (
     <>
@@ -78,14 +27,13 @@ function App() {
     <Section 
     content = 
       {<Form 
-        typeCurrency= {typeCurrency}
-        onSelectChange= {onSelectChange}
-        onSubmitForm = {onSubmitForm}
-        onInputChange= {onInputChange}
         firstAmount = {firstAmount}
-        onRadioChange= {onRadioChange}
-        fromPLN= {fromPLN}
+        typeCurrency= {typeCurrency}
         intoPLN= {intoPLN}
+        setTypeCurrency={setTypeCurrency}
+        setFirstAmount={setFirstAmount}
+        setFinalAmount={setFinalAmount}
+        setIntoPLN={setIntoPLN}
     /> }
     />
     <Section 

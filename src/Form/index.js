@@ -1,7 +1,59 @@
+import { useState } from "react";
 import "./style.css"
 
-const Form = ({ typeCurrency, onSelectChange, onSubmitForm, onInputChange, firstAmount, onRadioChange, fromPLN, intoPLN }) => {
+const Form = ( {firstAmount, typeCurrency, intoPLN, setTypeCurrency, setFirstAmount, setFinalAmount, setIntoPLN }) => {
 
+  const [fromPLN, setFromPLN] = useState(true);
+
+
+  const onSelectChange = ({target}) => {setTypeCurrency(target.value)};
+
+  const onInputChange = ({target})  => {setFirstAmount(target.value)};
+
+  const onRadioChange = () => {
+    setIntoPLN(intoPLN => !intoPLN) 
+    setFromPLN(fromPLN => !fromPLN)
+  };
+
+
+  const calculateIntoPLN = (amount, rate) => {
+    setFinalAmount(amount * rate)
+  };
+
+  const calculateFromPLN = (amount, rate) => {
+    setFinalAmount(amount / rate)
+  };
+
+  const onSubmitForm = (event) => {
+    event.preventDefault();
+    recognizeThenInit();
+  };
+  
+  const recognizeThenInit = () => {
+    const rateEUR = 4.69;
+    const rateGBP = 5.44;
+    const rateUSD = 4.48;
+
+    if (intoPLN) {
+      switch (typeCurrency) {
+        case "USD":
+          return calculateIntoPLN(firstAmount, rateUSD);
+        case "EUR":
+          return calculateIntoPLN(firstAmount, rateEUR);
+        case "GBP":
+          return calculateIntoPLN(firstAmount, rateGBP);
+      }
+    } else if (fromPLN) {
+      switch (typeCurrency) {
+        case "USD":
+          return calculateFromPLN(firstAmount, rateUSD);
+        case "EUR":
+          return calculateFromPLN(firstAmount, rateEUR);
+        case "GBP":
+          return calculateFromPLN(firstAmount, rateGBP);
+      }
+    }
+  };
   return (
     <>
       <form className="form" onSubmit={onSubmitForm}>
