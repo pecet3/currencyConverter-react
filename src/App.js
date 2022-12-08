@@ -9,8 +9,8 @@ import currencies from "./currencies.js"
 
 function App() {
   const [typeCurrency, setTypeCurrency] = useState(currencies[0].short);
-  const [amount, setAmount] = useState(0);
-  const [result, setResult] = useState(0);
+  const [amount, setAmount] = useState();
+  const [result, setResult] = useState();
   const [intoPLN, setIntoPLN] = useState(true);
 
 
@@ -31,21 +31,17 @@ function App() {
         typeCurrency= {typeCurrency}
         intoPLN= {intoPLN}
         setTypeCurrency={setTypeCurrency}
-        setamount={setAmount}
-        setresult={setResult}
+        setAmount={setAmount}
+        setResult={setResult}
         setIntoPLN={setIntoPLN}
     /> }
     />
+    {result !== undefined && (
     <Section 
     content = 
-    {<Result
-      amount = {amount}
-      typeCurrency= {typeCurrency}
-      intoPLN= {intoPLN}
-      result = {result}
-       />}
-    extraClass="section--result"
-    />
+    {<Result result = {result} intoPLN = {intoPLN}/>}
+    />)}
+    
     </Main>
     <Footer/>
     </>
