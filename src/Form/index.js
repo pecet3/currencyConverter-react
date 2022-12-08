@@ -20,24 +20,26 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    calculate(typeCurrency, amount);
+    calculate(typeCurrency, amount, intoPLN);
   };
 
-  const calculate = (typeCurrency, amount) => {
+  const calculate = (typeCurrency, amount, intoPLN) => {
     const rate = currencies.find(({ short }) => short === typeCurrency).rate
 
     if (intoPLN) {
       return setResult({
         firstAmount: amount,
         finalAmount: amount / rate,
-        typeCurrency, 
+        typeCurrency,
+        intoPLN,
       })
     }
     else if (fromPLN) {
       return setResult({
-        firstAmount: amount,
+        firstAmount: +amount,
         finalAmount: amount * rate,
-        typeCurrency, 
+        typeCurrency,
+        intoPLN, 
       })
     }
   };
@@ -116,8 +118,6 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
           </label>
         </fieldset>
         <p className="form__textDataInfo">*kursy pochodzą z dnia 06.12.2022</p>
-        <div className="form__containerButton">
-        </div>
       </form>
     </>
   )

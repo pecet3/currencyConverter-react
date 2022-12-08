@@ -39,9 +39,9 @@ function App() {
     {result !== undefined && (
     <Section 
     content = 
-    {<Result result = {result} intoPLN = {intoPLN}/>}
+    {<Result result = {result}/>}
     />)}
-    
+
     </Main>
     <Footer/>
     </>
