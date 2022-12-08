@@ -1,0 +1,8 @@
+.result{
+    text-align: center;
+    font-size: 19px;
+    background-color: rgb(218, 205, 188);
+    border-radius: 10px;
+    padding: 1px;
+    width: 400px;
+}
