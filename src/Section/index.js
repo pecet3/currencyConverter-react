@@ -1,7 +1,7 @@
 import "./style.css"
 
-const Section = ({content, extraClass}) => (
-    <section className={`section ${extraClass}`}>
+const Section = ({content}) => (
+    <section className="section">
         {content}
     </section>
 );

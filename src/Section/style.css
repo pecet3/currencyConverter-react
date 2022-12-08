@@ -1,13 +1,7 @@
 .section{
     margin: 20px auto;
+    display:flex;
+    justify-content: center;
+    flex-basis: 2;
 }
 
-.section--result{
-    text-align: center;
-    font-size: 19px;
-    background-color: rgb(218, 205, 188);
-    border-radius: 10px;
-    padding: 1px;
-    max-width: 400px;
-
-}
