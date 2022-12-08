@@ -2,15 +2,15 @@ import Header from "./Header"
 import Section from "./Section"
 import Main from "./Main"
 import Form from "./Form"
-import FinalAmount from "./FinalAmount"
+import Result from "./Result"
 import Footer from "./Footer"
 import {useState} from "react" 
 import currencies from "./currencies.js"
 
 function App() {
   const [typeCurrency, setTypeCurrency] = useState(currencies[0].short);
-  const [firstAmount, setFirstAmount] = useState(0);
-  const [finalAmount, setFinalAmount] = useState(0);
+  const [amount, setamount] = useState(0);
+  const [result, setresult] = useState(0);
   const [intoPLN, setIntoPLN] = useState(true);
 
 
@@ -27,24 +27,24 @@ function App() {
     <Section 
     content = 
       {<Form 
-        firstAmount = {firstAmount}
+        amount = {amount}
         typeCurrency= {typeCurrency}
         intoPLN= {intoPLN}
         setTypeCurrency={setTypeCurrency}
-        setFirstAmount={setFirstAmount}
-        setFinalAmount={setFinalAmount}
+        setamount={setamount}
+        setresult={setresult}
         setIntoPLN={setIntoPLN}
     /> }
     />
     <Section 
     content = 
-    {<FinalAmount
-      firstAmount = {firstAmount}
+    {<Result
+      amount = {amount}
       typeCurrency= {typeCurrency}
       intoPLN= {intoPLN}
-      finalAmount = {finalAmount}
+      result = {result}
        />}
-    extraClass="section--finalAmount"
+    extraClass="section--result"
     />
     </Main>
     <Footer/>

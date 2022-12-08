@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./style.css"
 import currencies from "../currencies.js"
 
-const Form = ({ firstAmount, typeCurrency, intoPLN, setTypeCurrency, setFirstAmount, setFinalAmount, setIntoPLN }) => {
+const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setamount, setresult, setIntoPLN }) => {
 
   const [fromPLN, setFromPLN] = useState(false);
 
@@ -10,7 +10,7 @@ const Form = ({ firstAmount, typeCurrency, intoPLN, setTypeCurrency, setFirstAmo
   const onSelectChange = ({ target }) => { setTypeCurrency(target.value) };
 
   const onInputChange = ({ target }) => {
-    setFirstAmount(target.value)
+    setamount(target.value)
   };
 
   const onRadioChange = () => {
@@ -20,26 +20,26 @@ const Form = ({ firstAmount, typeCurrency, intoPLN, setTypeCurrency, setFirstAmo
 
 
   const calculateIntoPLN = (amount, rate) => {
-    setFinalAmount(amount * rate)
+    setresult(amount * rate)
   };
 
   const calculateFromPLN = (amount, rate) => {
-    setFinalAmount(amount / rate)
+    setresult(amount / rate)
   };
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    recognizeThenInit(typeCurrency, firstAmount);
+    calculate(typeCurrency, amount);
   };
 
-  const recognizeThenInit = (typeCurrency, firstAmount) => {
+  const calculate = (typeCurrency, amount) => {
     const rate = currencies.find(({ short }) => short === typeCurrency).rate
 
     if (intoPLN) {
-      return calculateIntoPLN(firstAmount, rate)
+      return setresult(amount, rate)
     }
     else if (fromPLN) {
-      return calculateFromPLN(firstAmount, rate)
+      return calculateFromPLN(amount, rate)
     }
   };
 
@@ -110,7 +110,7 @@ const Form = ({ firstAmount, typeCurrency, intoPLN, setTypeCurrency, setFirstAmo
               </div>
               <div className="form__containerElement">
                 <input type="number" className="form__field" min="0.00"
-                  step="0.01" value={firstAmount} onChange={onInputChange} />
+                  step="0.01" value={amount} onChange={onInputChange} />
               </div>
               <button className="form__submitButton">Policz Wynik</button>
             </div>
