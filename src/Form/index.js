@@ -1,17 +1,20 @@
 import { useState } from "react";
 import "./style.css"
+import currencies from "../currencies.js"
 
-const Form = ( {firstAmount, typeCurrency, intoPLN, setTypeCurrency, setFirstAmount, setFinalAmount,setIntoPLN }) => {
+const Form = ({ firstAmount, typeCurrency, intoPLN, setTypeCurrency, setFirstAmount, setFinalAmount, setIntoPLN }) => {
 
   const [fromPLN, setFromPLN] = useState(false);
 
 
-  const onSelectChange = ({target}) => {setTypeCurrency(target.value)};
+  const onSelectChange = ({ target }) => { setTypeCurrency(target.value) };
 
-  const onInputChange = ({target})  => {setFirstAmount(target.value)};
+  const onInputChange = ({ target }) => {
+    setFirstAmount(target.value)
+  };
 
   const onRadioChange = () => {
-    setIntoPLN(intoPLN => !intoPLN) 
+    setIntoPLN(intoPLN => !intoPLN)
     setFromPLN(fromPLN => !fromPLN)
   };
 
@@ -26,34 +29,20 @@ const Form = ( {firstAmount, typeCurrency, intoPLN, setTypeCurrency, setFirstAmo
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    recognizeThenInit();
+    recognizeThenInit(typeCurrency, firstAmount);
   };
-  
-  const recognizeThenInit = () => {
-    const rateEUR = 4.69;
-    const rateGBP = 5.44;
-    const rateUSD = 4.48;
+
+  const recognizeThenInit = (typeCurrency, firstAmount) => {
+    const rate = currencies.find(({ short }) => short === typeCurrency).rate
 
     if (intoPLN) {
-      switch (typeCurrency) {
-        case "USD":
-          return calculateIntoPLN(firstAmount, rateUSD);
-        case "EUR":
-          return calculateIntoPLN(firstAmount, rateEUR);
-        case "GBP":
-          return calculateIntoPLN(firstAmount, rateGBP);
-      }
-    } else if (fromPLN) {
-      switch (typeCurrency) {
-        case "USD":
-          return calculateFromPLN(firstAmount, rateUSD);
-        case "EUR":
-          return calculateFromPLN(firstAmount, rateEUR);
-        case "GBP":
-          return calculateFromPLN(firstAmount, rateGBP);
-      }
+      return calculateIntoPLN(firstAmount, rate)
+    }
+    else if (fromPLN) {
+      return calculateFromPLN(firstAmount, rate)
     }
   };
+
   return (
     <>
       <form className="form" onSubmit={onSubmitForm}>
@@ -68,12 +57,14 @@ const Form = ( {firstAmount, typeCurrency, intoPLN, setTypeCurrency, setFirstAmo
                 name="currency"
                 value={typeCurrency}
                 onChange={onSelectChange}>
-
-                <option className="form__option" value="USD">
-                  Dolar Amerykański
-                </option>
-                <option className="form__option" value="EUR" select="true">Euro</option>
-                <option className="form__option" value="GBP">Funt Angielski</option>
+                {currencies.map((currency => (
+                  <option
+                    key={currency.short}
+                    value={currency.short}
+                  >
+                    {currency.name}
+                  </option>
+                )))}
               </select>
             </div>
           </p>
