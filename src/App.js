@@ -9,8 +9,8 @@ import currencies from "./currencies.js"
 
 function App() {
   const [typeCurrency, setTypeCurrency] = useState(currencies[0].short);
-  const [amount, setamount] = useState(0);
-  const [result, setresult] = useState(0);
+  const [amount, setAmount] = useState(0);
+  const [result, setResult] = useState(0);
   const [intoPLN, setIntoPLN] = useState(true);
 
 
@@ -31,8 +31,8 @@ function App() {
         typeCurrency= {typeCurrency}
         intoPLN= {intoPLN}
         setTypeCurrency={setTypeCurrency}
-        setamount={setamount}
-        setresult={setresult}
+        setamount={setAmount}
+        setresult={setResult}
         setIntoPLN={setIntoPLN}
     /> }
     />

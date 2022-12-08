@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./style.css"
 import currencies from "../currencies.js"
 
-const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setamount, setresult, setIntoPLN }) => {
+const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setResult, setIntoPLN }) => {
 
   const [fromPLN, setFromPLN] = useState(false);
 
@@ -10,21 +10,12 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setamount, setre
   const onSelectChange = ({ target }) => { setTypeCurrency(target.value) };
 
   const onInputChange = ({ target }) => {
-    setamount(target.value)
+    setAmount(target.value)
   };
 
   const onRadioChange = () => {
     setIntoPLN(intoPLN => !intoPLN)
     setFromPLN(fromPLN => !fromPLN)
-  };
-
-
-  const calculateIntoPLN = (amount, rate) => {
-    setresult(amount * rate)
-  };
-
-  const calculateFromPLN = (amount, rate) => {
-    setresult(amount / rate)
   };
 
   const onSubmitForm = (event) => {
@@ -36,10 +27,18 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setamount, setre
     const rate = currencies.find(({ short }) => short === typeCurrency).rate
 
     if (intoPLN) {
-      return setresult(amount, rate)
+      return setResult({
+        firstAmount: amount,
+        finalAmount: amount / rate,
+        typeCurrency, 
+      })
     }
     else if (fromPLN) {
-      return calculateFromPLN(amount, rate)
+      return setResult({
+        firstAmount: amount,
+        finalAmount: amount * rate,
+        typeCurrency, 
+      })
     }
   };
 
