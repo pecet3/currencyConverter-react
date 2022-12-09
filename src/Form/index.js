@@ -29,7 +29,7 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
     if (intoPLN) {
       return setResult({
         firstAmount: amount,
-        finalAmount: amount / rate,
+        finalAmount: amount * rate,
         typeCurrency,
         intoPLN,
       })
@@ -37,7 +37,7 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
     else if (fromPLN) {
       return setResult({
         firstAmount: +amount,
-        finalAmount: amount * rate,
+        finalAmount: amount / rate,
         typeCurrency,
         intoPLN, 
       })
@@ -110,8 +110,13 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
                 <span className="form__labelText">Ilość:</span>
               </div>
               <div className="form__containerElement">
-                <input type="number" className="form__field" min="0.00"
-                  step="0.01" value={amount} onChange={onInputChange} />
+                <input 
+                type="number" 
+                className="form__field" 
+                min="0.00"
+                step="0.01" 
+                value={amount} 
+                onChange={onInputChange} />
               </div>
               <button className="form__submitButton">Policz Wynik</button>
             </div>
