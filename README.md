@@ -5,6 +5,9 @@ The main difference is the addition of a submit button. The result  changes when
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Demo
+[Click to go to the demo](https://pecet3.github.io/currencyConverter-react/)
+
 ## Available Scripts
 
 In the project directory, you can run:
