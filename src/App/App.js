@@ -4,7 +4,7 @@ import Main from "./Main"
 import Form from "./Form"
 import Result from "./Result"
 import Footer from "./Footer"
-import {useState} from "react" 
+import { useState } from "react"
 import currencies from "./currencies.js"
 
 function App() {
@@ -17,30 +17,37 @@ function App() {
 
   return (
     <>
-    <Header title="Kalkulator walut"/>
-    <Main>
-    
+      <Header title="Kalkulator walut" />
+      <Main>
+        <Section
+          content={currencies.map((currency => (
+            <li>
+              1 {currency.short} ({currency.name}) = <strong>{currency.rate}</strong> PLN
+            </li>
+          )))}
+        />
 
-    <Section 
-    content = 
-      {<Form 
-        amount = {amount}
-        typeCurrency= {typeCurrency}
-        intoPLN= {intoPLN}
-        setTypeCurrency={setTypeCurrency}
-        setAmount={setAmount}
-        setResult={setResult}
-        setIntoPLN={setIntoPLN}
-    /> }
-    />
-    {result !== undefined && (
-    <Section 
-    content = 
-    {<Result result = {result} />}
-    />)}
-    
-    </Main>
-    <Footer/>
+
+        <Section
+          content=
+          {<Form
+            amount={amount}
+            typeCurrency={typeCurrency}
+            intoPLN={intoPLN}
+            setTypeCurrency={setTypeCurrency}
+            setAmount={setAmount}
+            setResult={setResult}
+            setIntoPLN={setIntoPLN}
+          />}
+        />
+        {result !== undefined && (
+          <Section
+            content=
+            {<Result result={result} />}
+          />)}
+
+      </Main>
+      <Footer />
     </>
 
 
