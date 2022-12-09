@@ -20,14 +20,13 @@ function App() {
       <Header title="Kalkulator walut" />
       <Main>
         <Section
-          content={currencies.map((currency => (
-            <li>
+          content=
+          {currencies.map((currency => (
+            <li className="section__list">
               1 {currency.short} ({currency.name}) = <strong>{currency.rate}</strong> PLN
             </li>
           )))}
         />
-
-
         <Section
           content=
           {<Form
