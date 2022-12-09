@@ -4,9 +4,8 @@
     max-width: 330px;
     border-radius: 10px;
     background-color: hsl(34, 78%, 85%);
-    background-image: url("../images/header_background.jpg");
-    background-attachment: fixed;
-    background-position: 50% 100%;
+    background-image: url("/src/images/header_background.jpg");
+    background-position: 50% 90%;
     border: 1px solid;
 
 }
