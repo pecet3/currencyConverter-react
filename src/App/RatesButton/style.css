@@ -1,15 +1,18 @@
 .ratesButton{
     border:none;
-    padding: 10px 0 10px 0;
-    margin-bottom:-10px;
-    background-color: transparent;
+    padding: 2px 5px;
+    margin-top: 5px;
+    background-color: hsl(34, 37%, 78%);
+    border-radius: 5px;
     font-weight: 600;
-    font-size: 14px;
-    transition: .4s;
+    font-size: 13px;
+    transition: .3s;
     color: rgb(59, 59, 59);
+
 }
 
 .ratesButton:hover{
     cursor: pointer;
-    transform: scale(1.05);
+    transform: scale(1.025);
+    background-color: hsl(35, 37%, 75%);
 }
