@@ -6,6 +6,7 @@ import Result from "./Result"
 import Footer from "./Footer"
 import { useState } from "react"
 import currencies from "./currencies.js"
+import List from "./List"
 
 function App() {
   const [typeCurrency, setTypeCurrency] = useState(currencies[0].short);
@@ -20,12 +21,7 @@ function App() {
       <Header title="Kalkulator walut" />
       <Main>
         <Section
-          content=
-          {currencies.map((currency => (
-            <li className="section__list">
-              1 {currency.short} ({currency.name}) = <strong>{currency.rate}</strong> PLN
-            </li>
-          )))}
+          content={<List/>}
         />
         <Section
           content=

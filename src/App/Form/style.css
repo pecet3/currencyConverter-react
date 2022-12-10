@@ -122,7 +122,7 @@
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 374px) {
     .form__submitButton {
         grid-column-start: 1;
     }
