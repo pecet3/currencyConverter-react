@@ -1,11 +1,16 @@
 .main {
     max-width: 650px;
     margin: 0 auto;
-    background-color: rgba(250, 235, 215, 0.817);
+    background-color: rgba(250, 235, 215, 0.753);
     border-radius: 15px;
     padding: 5px 15px 10px;
     text-align: left;
     border: 1px solid;
     box-shadow: 0px 0px 40px 10px rgb(0, 0, 0);
+}
+@media (max-width: 768px){
+    .main{
+        background-color: rgba(250, 235, 215, 0.913);
+    }
 }
 
