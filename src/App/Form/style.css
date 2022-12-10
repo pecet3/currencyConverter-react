@@ -106,6 +106,7 @@
     transition: .3s;
     margin-left: 10px;
     font-weight: 600;
+    box-shadow: 0px 0px 6px rgb(127, 127, 127);
 
 }
 
