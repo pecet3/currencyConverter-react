@@ -26,7 +26,7 @@ function App() {
         <Section
           content= {showRates ? <List /> : ""}
         />
-        <button onClick={onClickButton} className="showRatesButton">Pokaż Kursy Walut</button>
+        <button onClick={onClickButton} className="ratesButton">Pokaż Kursy Walut</button>
         <Section
           content=
           {<Form
