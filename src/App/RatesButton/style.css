@@ -2,7 +2,7 @@
     border:none;
     padding: 2px 5px;
     margin-top: 5px;
-    background-color: hsl(34, 37%, 78%);
+    background-color: hsl(35, 100%, 91%);
     border-radius: 5px;
     font-weight: 600;
     font-size: 13px;
@@ -14,5 +14,5 @@
 .ratesButton:hover{
     cursor: pointer;
     transform: scale(1.025);
-    background-color: hsl(35, 37%, 75%);
+    background-color: transparent;
 }
