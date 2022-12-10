@@ -13,16 +13,20 @@ function App() {
   const [amount, setAmount] = useState();
   const [result, setResult] = useState();
   const [intoPLN, setIntoPLN] = useState(true);
+  const [showRates, setShowRates] = useState(false);
 
-
+  const onClickButton = () => {
+    setShowRates(!showRates);
+  }
 
   return (
     <>
       <Header title="Kalkulator walut" />
       <Main>
         <Section
-          content={<List/>}
+          content= {showRates ? <List /> : ""}
         />
+        <button onClick={onClickButton} className="showRatesButton">Pokaż Kursy Walut</button>
         <Section
           content=
           {<Form
