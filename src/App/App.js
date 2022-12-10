@@ -7,6 +7,7 @@ import Footer from "./Footer"
 import { useState } from "react"
 import currencies from "./currencies.js"
 import List from "./List"
+import RatesButton from "./RatesButton"
 
 function App() {
   const [typeCurrency, setTypeCurrency] = useState(currencies[0].short);
@@ -15,18 +16,19 @@ function App() {
   const [intoPLN, setIntoPLN] = useState(true);
   const [showRates, setShowRates] = useState(false);
 
-  const onClickButton = () => {
-    setShowRates(!showRates);
-  }
+
 
   return (
     <>
       <Header title="Kalkulator walut" />
       <Main>
-        <Section
-          content= {showRates ? <List /> : ""}
+        <RatesButton
+          showRates={showRates}
+          setShowRates={setShowRates}
         />
-        <button onClick={onClickButton} className="ratesButton">Pokaż Kursy Walut</button>
+        <Section
+          content={showRates ? <List /> : ""}
+        />
         <Section
           content=
           {<Form
