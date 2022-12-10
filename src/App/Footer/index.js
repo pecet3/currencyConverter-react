@@ -2,7 +2,7 @@ import "./style.css"
 
 const Footer = () => (
     <footer className="footer">
-        <p>Jakub Pacewicz 2022 ©</p>
+        Jakub Pacewicz 2022 ©
     </footer>
 );
 
