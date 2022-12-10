@@ -5,8 +5,8 @@
 .form__legend {
     border: 1px solid;
     background-color: antiquewhite;
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 7px;
+    padding: 4px 10px;
 }
 
 .form__fieldset {
@@ -100,7 +100,7 @@
     max-width: 200px;
     padding: 10px;
     border: none;
-    background-color: hsl(34, 48%, 74%);
+    background-color: hsl(34, 52%, 78%);
     border-radius: 5px;
     color: rgb(0, 0, 0);
     transition: .3s;
@@ -111,7 +111,7 @@
 
 .form__submitButton:hover {
     cursor: pointer;
-    background-color: hsl(34, 48%, 70%);
+    background-color: hsl(34, 52%, 75%);
     transform: scale(1.05);
 }
 
