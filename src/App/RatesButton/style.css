@@ -6,13 +6,13 @@
     border-radius: 5px;
     font-weight: 600;
     font-size: 13px;
-    transition: .2s;
+    transition: .3s;
     color: rgb(0, 0, 0);
 
 }
 
 .ratesButton:hover{
     cursor: pointer;
-    transform: scale(1.05);
+    transform: scale(1.04);
     background-color: hsl(36, 82%, 85%);
 }
