@@ -1,11 +1,12 @@
 .ratesButton{
     border:none;
-    padding: 10px;
+    padding: 10px 0 10px 0;
     margin-bottom:-10px;
     background-color: transparent;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     transition: .4s;
+    color: rgb(59, 59, 59);
 }
 
 .ratesButton:hover{
