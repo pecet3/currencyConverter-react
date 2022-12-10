@@ -1,0 +1,14 @@
+.ratesButton{
+    border:none;
+    padding: 10px;
+    margin-bottom:-10px;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 15px;
+    transition: .4s;
+}
+
+.ratesButton:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
