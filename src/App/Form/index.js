@@ -36,7 +36,7 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
     }
     else if (fromPLN) {
       return setResult({
-        firstAmount: +amount,
+        firstAmount: amount,
         finalAmount: amount / rate,
         typeCurrency,
         intoPLN, 
