@@ -18,7 +18,13 @@ body {
   background-image: url('./images/background.jpg');
   background-size:2560px 1440px;
 }
-
+@media (max-width: 768px){
+  body {
+    background-image: url('./images/background_phone.jpg');
+    background-size: 800px 1100px;
+    background-position: 10% 0;
+  }
+}
 #root {
   display:flex;
   flex-direction: column;
