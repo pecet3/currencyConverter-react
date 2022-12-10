@@ -118,7 +118,7 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
                 value={amount} 
                 onChange={onInputChange} />
               </div>
-              <button className="form__submitButton">Policz Wynik</button>
+              <button className="form__submitButton">Oblicz Wynik</button>
             </div>
           </label>
         </fieldset>
