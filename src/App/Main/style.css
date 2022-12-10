@@ -1,12 +1,12 @@
-.main{
+.main {
     max-width: 650px;
-    margin:0 auto;
+    margin: 0 auto;
     background-color: antiquewhite;
     border-radius: 15px;
     padding: 5px 15px 10px;
     text-align: left;
     border: 1px solid;
     box-shadow: 0px 0px 30px 3px rgb(0, 0, 0);
-    
-    
+
+
 }
