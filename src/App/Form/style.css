@@ -77,7 +77,7 @@
     }    
 }
 
-@media(max-width: 320px){ 
+@media(max-width: 374px){ 
     .form__container {
         grid-template-columns: 1fr;
     }
