@@ -18,3 +18,9 @@ body {
   background-image: url('./images/background.jpg');
   background-size:2560px 1440px;
 }
+
+#root {
+  display:flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
