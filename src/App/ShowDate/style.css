@@ -1,0 +1,8 @@
+.date{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 2px;
+    border-radius: 5px;
+    font-family: 'Martian Mono', monospace;
+    font-size: 12px;
+}

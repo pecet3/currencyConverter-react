@@ -1,5 +1,5 @@
 import "./style.css";
-import {useState, useEffect} from "react"
+import { useState, useEffect } from "react"
 
 const ShowDate = () => {
     const [date, setDate] = useState(new Date());
@@ -8,18 +8,25 @@ const ShowDate = () => {
         const intervalId = setInterval(() => {
             setDate(new Date())
         }, 1000);
-        
+
         return () => {
             clearInterval(intervalId);
         }
-    },[]);
-    
-    
+    }, []);
+
+
     return (
         <div className="date">
-            <p>{`${date}`}</p>
+                {`${
+                    date.toLocaleDateString
+                        ("pl-PL",
+                            {
+                                weekday: "long", day: "numeric", month: "long", year: "numeric"
+                            })},
+                 ${date.toLocaleTimeString()
+                 }`}
         </div>
     )
-    };
+};
 
 export default ShowDate;
