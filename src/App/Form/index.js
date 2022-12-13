@@ -50,7 +50,6 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
 
         <fieldset className="form__fieldset">
           <legend className="form__legend">Wybierz walutę do obliczeń</legend>
-          <p>
             <div className="form__container">
               <span className="form__labelText">Waluta:</span>
               <select
@@ -68,7 +67,6 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
                 )))}
               </select>
             </div>
-          </p>
         </fieldset>
 
         <fieldset className="form__fieldset">

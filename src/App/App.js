@@ -12,7 +12,7 @@ import ShowDate from "./ShowDate"
 
 function App() {
   const [typeCurrency, setTypeCurrency] = useState(currencies[0].short);
-  const [amount, setAmount] = useState(0.00);
+  const [amount, setAmount] = useState(0);
   const [result, setResult] = useState();
   const [intoPLN, setIntoPLN] = useState(true);
   const [showRates, setShowRates] = useState(false);
