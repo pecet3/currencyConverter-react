@@ -8,6 +8,7 @@ import { useState } from "react"
 import currencies from "./currencies.js"
 import List from "./List"
 import RatesButton from "./RatesButton"
+import ShowDate from "./ShowDate"
 
 function App() {
   const [typeCurrency, setTypeCurrency] = useState(currencies[0].short);
@@ -22,6 +23,7 @@ function App() {
     <>
       <Header title="Kalkulator walut" />
       <Main>
+        <Section content={<ShowDate />} />
         <RatesButton
           showRates={showRates}
           setShowRates={setShowRates}
