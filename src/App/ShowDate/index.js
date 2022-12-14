@@ -19,7 +19,7 @@ const ShowDate = () => {
         <div className="date">
                 {`${
                     date.toLocaleDateString
-                        ("pl-PL",
+                        (undefined,
                             {
                                 weekday: "long", day: "numeric", month: "long", year: "numeric"
                             })},
