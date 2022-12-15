@@ -23,10 +23,11 @@ function App() {
     <>
       <Header title="Kalkulator walut" />
       <Main>
-        <Section content={<ShowDate />} />
+        {/* <Section content={<ShowDate />} /> */}
         <RatesButton
           showRates={showRates}
           setShowRates={setShowRates}
+          showDate= {<ShowDate />}
         />
         <Section
           content={showRates ? <List /> : ""}
