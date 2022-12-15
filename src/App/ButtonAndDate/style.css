@@ -1,7 +1,7 @@
 .buttonAndDate {
     background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 7px;
-    padding: 5px;
+    border-radius: 8px;
+    padding: 8px;
     margin-top: 5px;
 
     display: grid;
