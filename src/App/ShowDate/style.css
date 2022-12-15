@@ -1,5 +1,11 @@
 .date{
     font-family: 'Martian Mono', monospace;
     font-size: 12px;
-    justify-self: flex-end;
+    justify-self: end;
+}
+
+@media(max-width: 767px){
+    .date{
+        justify-self: center;
+    }
 }
