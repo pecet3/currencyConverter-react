@@ -17,14 +17,18 @@ const ShowDate = () => {
 
     return (
         <div className="date">
-                {`${
-                    date.toLocaleDateString
-                        (undefined,
-                            {
-                                weekday: "long", day: "numeric", month: "long", year: "numeric"
-                            })},
-                 ${date.toLocaleTimeString()
-                 }`}
+            {`${date.toLocaleDateString
+                    (undefined,
+                        {
+                            weekday: "long",
+                            day: "numeric",
+                            month: "long",
+                            year: "numeric",
+                            hour: "numeric",
+                            minute: "numeric",
+                            second: "numeric"
+                        })}
+                 `}
         </div>
     )
 };
