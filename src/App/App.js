@@ -7,8 +7,8 @@ import Footer from "./Footer"
 import { useState } from "react"
 import currencies from "./currencies.js"
 import List from "./List"
-import RatesButton from "./RatesButton"
-import ShowDate from "./ShowDate"
+import ButtonAndDate from "./ButtonAndDate"
+import Date from "./Date"
 
 function App() {
   const [typeCurrency, setTypeCurrency] = useState(currencies[0].short);
@@ -23,11 +23,10 @@ function App() {
     <>
       <Header title="Kalkulator walut" />
       <Main>
-        {/* <Section content={<ShowDate />} /> */}
-        <RatesButton
+        <ButtonAndDate
           showRates={showRates}
           setShowRates={setShowRates}
-          showDate= {<ShowDate />}
+          showDate= {<Date />}
         />
         <Section
           content={showRates ? <List /> : ""}

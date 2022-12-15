@@ -16,7 +16,7 @@
     }
 }
 
-.ratesButton {
+.buttonAndDate__button {
     border: none;
     padding: 7px;
     background-color: hsl(193, 70%, 87%);
@@ -29,7 +29,7 @@
 
 }
 
-.ratesButton:hover {
+.buttonAndDate__button:hover {
     cursor: pointer;
     transform: scale(1.04);
     background-color: hsl(194, 87%, 84%);

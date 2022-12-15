@@ -1,6 +1,6 @@
 import "./style.css"
 
-const RatesButton = ({ showRates, setShowRates, showDate}) => {
+const ButtonAndDate = ({ showRates, setShowRates, showDate}) => {
     const onClickButton = () => {
         setShowRates(!showRates);
     }
@@ -8,7 +8,7 @@ const RatesButton = ({ showRates, setShowRates, showDate}) => {
         <>
         <div className="buttonAndDate">
         <button
-            onClick={onClickButton} className="ratesButton">
+            onClick={onClickButton} className="buttonAndDate__button">
             {showRates ? "Ukryj" : "Pokaż"} Kursy Walut
         </button>
         {showDate}
@@ -16,4 +16,4 @@ const RatesButton = ({ showRates, setShowRates, showDate}) => {
         </>
     )
 }
-export default RatesButton;
+export default ButtonAndDate;
