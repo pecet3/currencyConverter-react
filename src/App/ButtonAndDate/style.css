@@ -18,8 +18,8 @@
 
 .buttonAndDate__button {
     border: none;
-    padding: 7px;
-    background-color: hsl(193, 70%, 87%);
+    padding: 5px;
+    background-color: hsl(195, 8%, 81%);
     border-radius: 7px;
     font-weight: 600;
     font-size: 12px;
@@ -32,5 +32,5 @@
 .buttonAndDate__button:hover {
     cursor: pointer;
     transform: scale(1.04);
-    background-color: hsl(194, 87%, 84%);
+    background-color: hsl(195, 8%, 88%);
 }
