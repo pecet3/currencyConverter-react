@@ -1,13 +1,33 @@
 # Currency Converter React
 
-Hi, this is a React implementation of the [currency-converter-PLN-](https://github.com/pecet3/currency-converter-PLN-) I made in JavaScript Vanilla recently.
-The main difference is the addition of a submit button. The result  changes when you press it.
+Hi, this is the 2nd version of my [currency-converter-PLN-](https://github.com/pecet3/currency-converter-PLN-).
+I make it during frontend course and basically, almost everyday update this project.
+I am planning add Web API of the National Bank of Poland.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## [Click to go to the demo](https://pecet3.github.io/currencyConverter-react/)
+
+### [> Click to go to the demo ](https://pecet3.github.io/currencyConverter-react/)
+#
+## Technologies used
+- React.js
+- create-react-app
+- CSS
+- BEM convention
+- GIMP ;)
+#
+
+### Screenshots
+
+### Computer View
+![](readme_images/screenshot_computer.gif)
 
 
+### Mobie View
+
+![](readme_images/screenshot_mobile.gif)
+
+# 
 ### Available Scripts
 
 In the project directory, you can run:
