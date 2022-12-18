@@ -10,6 +10,8 @@
 @media(max-width: 767px){
     .date{
         justify-self: center;
-        background-color: transparent;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(241, 232, 188, 0.425);
     }
-}
+};
