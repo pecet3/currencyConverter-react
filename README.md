@@ -1,7 +1,7 @@
 # Currency Converter React
 
 Hi, this is the 2nd version of my [currency-converter-PLN-](https://github.com/pecet3/currency-converter-PLN-).
-I make it during frontend course and basically, almost everyday update this project.
+I make it during frontend course so, update this project almost everyday.
 I am planning add Web API of the National Bank of Poland.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
