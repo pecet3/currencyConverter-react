@@ -1,6 +1,7 @@
-import "./style.css"
+import "./style.css";
+import Clock from "./Clock";
 
-const ButtonAndDate = ({ showRates, setShowRates, Clock}) => {
+const ButtonAndDate = ({ showRates, setShowRates}) => {
     const onClickButton = () => {
         setShowRates(!showRates);
     }
@@ -11,7 +12,7 @@ const ButtonAndDate = ({ showRates, setShowRates, Clock}) => {
             onClick={onClickButton} className="buttonAndDate__button">
             {showRates ? "Ukryj" : "Pokaż"} Kursy Walut
         </button>
-        {Clock}
+        <Clock/>
         </div>
         </>
     )
