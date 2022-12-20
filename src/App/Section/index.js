@@ -1,9 +1,10 @@
 import "./style.css"
+import {Container} from "./styled.js";
 
 const Section = ({content}) => (
-    <section className="section">
+    <Container>
         {content}
-    </section>
+    </Container>
 );
 
 export default Section;
