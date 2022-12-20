@@ -1,10 +1,13 @@
-import "./style.css";
-
+import { ThemeProvider } from "styled-components"
+import { theme } from "../theme.js"
+import { Container, Content } from "./styled.js";
 
 const Header = ({ title }) => (
-    <header className="header">
-        <h1 className="header__title">{title}</h1>
-    </header>
+    <ThemeProvider theme={theme}>
+    <Container>
+        <Content>{title}</Content>
+    </Container>
+    </ThemeProvider>
 );
 
 export default Header;
