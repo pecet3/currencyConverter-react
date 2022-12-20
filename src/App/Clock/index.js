@@ -1,7 +1,7 @@
 import "./style.css";
 import { useState, useEffect } from "react"
 
-const ShowDate = () => {
+const Clock = () => {
     const [date, setDate] = useState(new Date());
 
     useEffect(() => {
@@ -33,4 +33,4 @@ const ShowDate = () => {
     )
 };
 
-export default ShowDate;
+export default Clock;
