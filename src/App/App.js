@@ -8,7 +8,7 @@ import { useState } from "react"
 import currencies from "./currencies.js"
 import List from "./List"
 import ButtonAndDate from "./ButtonAndDate"
-import Date from "./Clock"
+import Clock from "./Clock"
 
 function App() {
   const [typeCurrency, setTypeCurrency] = useState(currencies[0].short);
@@ -26,7 +26,7 @@ function App() {
         <ButtonAndDate
           showRates={showRates}
           setShowRates={setShowRates}
-          Clock= {<Date />}
+          Clock= {<Clock />}
         />
         <Section
           content={showRates ? <List /> : ""}
