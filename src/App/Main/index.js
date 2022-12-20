@@ -1,9 +1,13 @@
-import "./style.css"
+import {ThemeProvider} from "styled-components"
+import {theme} from "../theme.js"
+import {Container} from "./styled.js";
 
 const Main = (props) => (
-    <main className="main">
+    <ThemeProvider theme={theme}>
+    <Container>
         {props.children}
-    </main>
+    </Container>
+    </ThemeProvider>
 );
 
 export default Main;
