@@ -1,7 +1,10 @@
-import "./style.css"
+import {Container} from "./styled.js";
+import {ThemeProvider} from "styled-components"
+import {theme} from "../theme.js"
 
 const Result = ({ result }) => (
-    <div className="result">
+  <ThemeProvider theme={theme}>
+    <Container>
       <p>
         <strong>
           {
@@ -19,7 +22,8 @@ const Result = ({ result }) => (
           {result.intoPLN ? "PLN" : result.typeCurrency}
         </strong>
       </p>
-    </div>
+    </Container>
+    </ThemeProvider>
 );
 
 export default Result;
