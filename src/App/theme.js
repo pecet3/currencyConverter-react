@@ -4,9 +4,15 @@ export const theme = {
         transparentGrey: "rgba(196, 189, 182, 0.708)",
         transparentBleachWhite: "rgba(250, 235, 215, 0.753)",
         lessTransparentBleachWhite: "rgba(250, 235, 215, 0.913)",
-
+        almond: "hsl(33, 82%, 87%)",
+        darkAlmond: "hsl(34, 52%, 78%)",
+        moreDarkAlmond: "hsl(34, 52%, 75%)",
+        blueGrey: "rgb(212, 212, 212)",
+        darkBlueGrey: "rgb(192, 192, 192)",
+        
     },
     breakpoints: {
-        mobile: 768
+        mobile: 768,
+        fold: 374,
     },
 };

@@ -14,9 +14,8 @@ export const Legend = styled.legend`
 export const Fieldset = styled.fieldset`
     padding: 20px;
     border-radius: 10px;
-    background-color: hsl(33, 82%, 87%);
+    background-color: ${({theme})=> theme.colors.almond};
     margin: 20px auto;
-
 `;
 
 export const Select = styled.select`
@@ -25,8 +24,8 @@ export const Select = styled.select`
     font-size: 17px;
     font-weight: 500;
     color: rgb(41, 41, 41);
-    background-color: rgb(212, 212, 212);
-    border: 2px double rgb(192, 192, 192);
+    background-color: ${({theme})=> theme.colors.blueGrey};
+    border: 2px double ${({theme})=> theme.colors.darkBlueGrey};
     border-radius: 5px;
     width: 200px;
 `;
@@ -37,8 +36,8 @@ export const Input = styled.input`
     font-size: 17px;
     font-weight: 500;
     color: rgb(41, 41, 41);
-    background-color: rgb(212, 212, 212);
-    border: 2px double rgb(192, 192, 192);
+    background-color: ${({theme})=> theme.colors.blueGrey};
+    border: 2px double ${({theme})=> theme.colors.darkBlueGrey};
     border-radius: 5px;
     width: 200px;
 `;
@@ -92,7 +91,7 @@ export const Button = styled.button`
     max-width: 200px;
     padding: 10px;
     border: none;
-    background-color: hsl(34, 52%, 78%);
+    background-color: ${({theme})=> theme.colors.darkAlmond};;
     border-radius: 5px;
     color: rgb(0, 0, 0);
     transition: .3s;
@@ -102,7 +101,7 @@ export const Button = styled.button`
 
 &:hover {
     cursor: pointer;
-    background-color: hsl(34, 52%, 75%);
+    background-color: ${({theme})=> theme.colors.moreDarkAlmond};;
     transform: scale(1.05);
 }
 
