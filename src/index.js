@@ -5,14 +5,16 @@ import App from './App/App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from "styled-components";
 import { theme } from './App/theme';
+import { GlobalStyle } from './GlobalStyle';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ThemeProvider theme={theme}>
-    <React.StrictMode>
+  <React.StrictMode>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <App />
-    </React.StrictMode>
-  </ThemeProvider>
+    </ThemeProvider>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
