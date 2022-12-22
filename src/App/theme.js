@@ -11,7 +11,8 @@ export const theme = {
         darkBlueGrey: "rgb(192, 192, 192)",
         veryTransparentBlack: "rgba(0, 0, 0, 0.2)",
         lightGrey: "hsl(195, 8%, 81%)",
-        veryLightGrey: "hsl(195, 8%, 88%)"
+        veryLightGrey: "hsl(195, 8%, 88%)",
+        transparentLightGrey: "rgba(241, 232, 188, 0.425)",
         
     },
     breakpoints: {
