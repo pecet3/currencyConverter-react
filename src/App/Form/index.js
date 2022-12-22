@@ -9,7 +9,6 @@ import {
   Container,
   DataInfo,
   Button,
-  Element,
   Label,
   RadioElement,
 } from "./styled.js";
@@ -63,7 +62,6 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
     <>
       <ThemeProvider theme={theme}>
         <StyledForm onSubmit={onSubmitForm}>
-
           <Fieldset>
             <Legend>Wybierz walutę do obliczeń</Legend>
             <Container>
@@ -83,18 +81,14 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
               </Select>
             </Container>
           </Fieldset>
-
           <Fieldset>
             <Legend>
               Wpisz swój kapitał do przeliczenia
             </Legend>
             <Container currency>
-              <Element>
                 <LabelText currency>
                   Jaką walutę posiadasz?
                 </LabelText>
-              </Element>
-              <Element>
                 <Label radio>
                   <RadioElement>
                     <input
@@ -115,14 +109,10 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
                     {typeCurrency}
                   </RadioElement>
                 </Label>
-              </Element>
             </Container>
             <Label>
               <Container>
-                <Element>
                   <LabelText>Ilość:</LabelText>
-                </Element>
-                <Element>
                   <Input
                     type="number"
                     className="form__field"
@@ -130,7 +120,6 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
                     step="0.01"
                     value={amount}
                     onChange={onInputChange} />
-                </Element>
                 <Button>Oblicz Wynik</Button>
               </Container>
             </Label>
@@ -139,7 +128,6 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
         </StyledForm>
       </ThemeProvider>
     </>
-
   )
 
 };

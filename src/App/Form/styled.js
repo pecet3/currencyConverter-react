@@ -116,14 +116,11 @@ export const Button = styled.button`
 }
 `;
 
-export const Element = styled.div`
-    align-self: center;
-`;
-
 export const Label = styled.label`
 
    ${({ radio }) => radio && css`
         margin-right: 5px;
+        align-self: center;
    `} 
 `;
 
