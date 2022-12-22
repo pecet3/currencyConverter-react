@@ -12,7 +12,7 @@ export const theme = {
         veryTransparentBlack: "rgba(0, 0, 0, 0.2)",
         lightGrey: "hsl(195, 8%, 81%)",
         veryLightGrey: "hsl(195, 8%, 88%)",
-        transparentLightGrey: "rgba(241, 232, 188, 0.425)",
+        transparentAlmond: "rgba(241, 232, 188, 0.425)",
         
     },
     breakpoints: {
