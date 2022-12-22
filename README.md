@@ -13,6 +13,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - JSX
 - create-react-app
 - Styled Components
+- Google Fonts
 - GIMP ;)
 #
 
