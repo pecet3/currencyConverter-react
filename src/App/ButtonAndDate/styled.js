@@ -12,7 +12,7 @@ export const Container = styled.div`
 
     @media(max-width:${({theme})=> theme.breakpoints.mobile}px){
         grid-template-columns: 1fr;
-        grid-gap: 5px;
+        grid-gap: 7px;
     }
 `;
 
