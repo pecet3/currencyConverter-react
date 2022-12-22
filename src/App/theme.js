@@ -9,6 +9,9 @@ export const theme = {
         moreDarkAlmond: "hsl(34, 52%, 75%)",
         blueGrey: "rgb(212, 212, 212)",
         darkBlueGrey: "rgb(192, 192, 192)",
+        veryTransparentBlack: "rgba(0, 0, 0, 0.2)",
+        lightGrey: "hsl(195, 8%, 81%)",
+        veryLightGrey: "hsl(195, 8%, 88%)"
         
     },
     breakpoints: {
