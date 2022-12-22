@@ -20,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
         background-image: url(${background});
     }
 
-    @media (max-width: 768px){
+    @media (max-width:${({theme})=>theme.breakpoints.mobile}px){
     body {
         background-image: url(${backgroundMobile});
         background-size: 800px 1100px;
