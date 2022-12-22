@@ -12,7 +12,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - React.js
 - JSX
 - create-react-app
-- Styled Component
+- Styled Components
 - GIMP ;)
 #
 
