@@ -4,7 +4,7 @@ export const Container = styled.div`
     font-family: 'Martian Mono', monospace;
     font-size: 12px;
     justify-self: end;
-    background-color: transparent;
+    background-color: ${({theme})=>theme.colors.transparentLightGrey};
     padding: 5px 8px;
     border-radius: 7px;
 
