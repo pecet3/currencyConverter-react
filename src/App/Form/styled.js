@@ -105,16 +105,14 @@ export const Button = styled.button`
     transform: scale(1.05);
 }
 
-@media (max-width: ${({ theme }) => theme.breakpoints.mobile}px){
+@media (max-width:${({ theme }) => theme.breakpoints.mobile}px){
         margin-left: 0;
         margin-top: 10px;
         grid-column-start: 2;
 }
 
-@media (max-width: ${({ theme }) => theme.breakpoints.fold}px){
-    .form__submitButton {
-        grid-column-start: 2;
-    }
+    @media (max-width:${({ theme }) => theme.breakpoints.fold}px){
+        grid-column-start: 1;
 }
 `;
 
