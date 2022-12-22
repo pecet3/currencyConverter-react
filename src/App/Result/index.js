@@ -1,9 +1,6 @@
 import {Container} from "./styled.js";
-import {ThemeProvider} from "styled-components"
-import {theme} from "../theme.js"
 
 const Result = ({ result }) => (
-  <ThemeProvider theme={theme}>
     <Container>
       <p>
         <strong>
@@ -23,7 +20,6 @@ const Result = ({ result }) => (
         </strong>
       </p>
     </Container>
-    </ThemeProvider>
 );
 
 export default Result;

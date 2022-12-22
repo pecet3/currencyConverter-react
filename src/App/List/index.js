@@ -1,11 +1,8 @@
 import currencies from "../currencies.js"
-import { ThemeProvider } from "styled-components"
-import { theme } from "../theme.js"
 import { Container, Element } from "./styled.js";
 
 
 const List = () => (
-  <ThemeProvider theme={theme}>
     <Container>
       {currencies.map((currency => (
         <Element className="list__element" key={currency.short}>
@@ -13,7 +10,6 @@ const List = () => (
         </Element>
       )))}
     </Container>
-  </ThemeProvider>
 )
 
 export default List;    

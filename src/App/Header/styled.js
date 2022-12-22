@@ -4,7 +4,7 @@ import backgroundImage from "../../images/header_background.jpg"
 export const Container = styled.header`
     margin: 30px auto;
     padding: 10px;
-    max-width: 330px;
+    max-width: 440px;
     border-radius: 10px;
     background-image: url(${backgroundImage});
     background-position: 50% 90%;

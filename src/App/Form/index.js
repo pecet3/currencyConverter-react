@@ -13,8 +13,6 @@ import {
   RadioElement,
 } from "./styled.js";
 import currencies from "../currencies.js";
-import { ThemeProvider } from "styled-components"
-import { theme } from "../theme.js"
 
 const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setResult, setIntoPLN }) => {
 
@@ -60,7 +58,6 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
 
   return (
     <>
-      <ThemeProvider theme={theme}>
         <StyledForm onSubmit={onSubmitForm}>
           <Fieldset>
             <Legend>Wybierz walutę do obliczeń</Legend>
@@ -126,7 +123,6 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
           </Fieldset>
           <DataInfo>*kursy pochodzą z dnia 06.12.2022</DataInfo>
         </StyledForm>
-      </ThemeProvider>
     </>
   )
 

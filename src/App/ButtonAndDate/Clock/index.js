@@ -1,8 +1,6 @@
 
 import { useState, useEffect } from "react"
 import { Container } from './styled.js';
-import { ThemeProvider } from "styled-components"
-import { theme } from "../../theme"; 
 
 const useCurrentDate = () => {
     const [date, setDate] = useState(new Date());
@@ -25,7 +23,6 @@ const Clock = () => {
    
     return (
         <>
-        <ThemeProvider theme={theme}>
         <Container>
             {`${date.toLocaleDateString
                     (undefined,
@@ -40,7 +37,6 @@ const Clock = () => {
                         })}
                  `}
         </Container>
-        </ThemeProvider>
         </>
     )
 };
