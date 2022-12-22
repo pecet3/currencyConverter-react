@@ -1,9 +1,13 @@
-import "./style.css"
+import { StyledFooter } from './styled.js';
+import { ThemeProvider } from "styled-components"
+import { theme } from "../theme.js"
 
 const Footer = () => (
-    <footer className="footer">
+    <ThemeProvider theme={theme}>
+    <StyledFooter>
         Jakub Pacewicz 2022 ©
-    </footer>
+    </StyledFooter>
+    </ThemeProvider>
 );
 
 export default Footer;
