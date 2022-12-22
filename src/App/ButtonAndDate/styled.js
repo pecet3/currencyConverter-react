@@ -29,6 +29,6 @@ export const Button = styled.button`
     &:hover{
         cursor: pointer;
         transform: scale(1.04);
-        background-color: ${({theme})=>theme.colors.veryLightGrey};
+        filter: brightness(110%);
     }
 `;
