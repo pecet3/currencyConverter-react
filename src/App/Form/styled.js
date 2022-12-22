@@ -89,7 +89,7 @@ export const Button = styled.button`
 
 &:hover {
     cursor: pointer;
-    background-color: ${({theme})=> theme.colors.moreDarkAlmond};;
+    filter: brightness(95%);
     transform: scale(1.05);
 }
 
