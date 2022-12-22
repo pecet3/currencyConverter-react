@@ -1,5 +1,7 @@
-import "./style.css";
 import Clock from "./Clock";
+import { Container, Button } from './styled.js';
+import { ThemeProvider } from "styled-components"
+import { theme } from "../theme.js"
 
 const ButtonAndDate = ({ showRates, setShowRates}) => {
     const onClickButton = () => {
@@ -7,13 +9,15 @@ const ButtonAndDate = ({ showRates, setShowRates}) => {
     }
     return (
         <>
-        <div className="buttonAndDate">
-        <button
+        <ThemeProvider theme={theme}>
+        <Container>
+        <Button
             onClick={onClickButton} className="buttonAndDate__button">
             {showRates ? "Ukryj" : "Pokaż"} Kursy Walut
-        </button>
+        </Button>
         <Clock/>
-        </div>
+        </Container>
+        </ThemeProvider>
         </>
     )
 }
