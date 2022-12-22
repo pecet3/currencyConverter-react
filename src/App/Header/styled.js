@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import backgroundImage from "./header_background.jpg"
+import backgroundImage from "../../images/header_background.jpg"
 
 export const Container = styled.header`
     margin: 30px auto;
