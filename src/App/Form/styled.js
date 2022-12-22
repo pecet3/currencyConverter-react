@@ -18,18 +18,6 @@ export const Fieldset = styled.fieldset`
     margin: 20px auto;
 `;
 
-export const Select = styled.select`
-    padding: 10px;
-    font-family: 'Dosis', sans-serif;
-    font-size: 17px;
-    font-weight: 500;
-    color: rgb(41, 41, 41);
-    background-color: ${({theme})=> theme.colors.blueGrey};
-    border: 2px double ${({theme})=> theme.colors.darkBlueGrey};
-    border-radius: 5px;
-    width: 200px;
-`;
-
 export const Input = styled.input`
     padding: 10px;
     font-family: 'Dosis', sans-serif;

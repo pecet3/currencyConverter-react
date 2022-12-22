@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
   StyledForm,
   Legend,
-  Select,
   LabelText,
   Fieldset,
   Input,
@@ -63,7 +62,8 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
             <Legend>Wybierz walutę do obliczeń</Legend>
             <Container>
               <LabelText>Waluta:</LabelText>
-              <Select
+              <Input 
+                as="select"
                 name="currency"
                 value={typeCurrency}
                 onChange={onSelectChange}>
@@ -75,7 +75,7 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
                     {currency.name}
                   </option>
                 )))}
-              </Select>
+              </Input>
             </Container>
           </Fieldset>
           <Fieldset>
