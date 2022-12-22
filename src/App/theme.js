@@ -11,6 +11,7 @@ export const theme = {
         darkBlueGrey: "rgb(192, 192, 192)",
         veryTransparentBlack: "rgba(0, 0, 0, 0.2)",
         lightGrey: "hsl(195, 8%, 81%)",
+        transparentLightGrey: "rgba(226, 223, 223, 0.66)",
         veryLightGrey: "hsl(195, 8%, 88%)",
         transparentAlmond: "rgba(241, 232, 188, 0.425)",
         
