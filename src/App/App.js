@@ -5,18 +5,15 @@ import Form from "./Form"
 import Result from "./Result"
 import Footer from "./Footer"
 import { useState } from "react"
-import currencies from "./currencies.js"
 import List from "./List"
 import ButtonAndDate from "./ButtonAndDate"
 
-
 function App() {
-  const [typeCurrency, setTypeCurrency] = useState(currencies[0].short);
+  const [typeCurrency, setTypeCurrency] = useState("EUR");
   const [amount, setAmount] = useState(0);
   const [result, setResult] = useState();
   const [intoPLN, setIntoPLN] = useState(true);
   const [showRates, setShowRates] = useState(false);
-
 
 
   return (

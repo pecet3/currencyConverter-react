@@ -11,12 +11,12 @@ import {
   Label,
   RadioElement,
 } from "./styled.js";
-import currencies from "../currencies.js";
+import { useCurrencies } from "../useCurrencies.js";
 
 const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setResult, setIntoPLN }) => {
+  const currencies = useCurrencies();
 
   const [fromPLN, setFromPLN] = useState(false);
-
 
   const onSelectChange = ({ target }) => { setTypeCurrency(target.value) };
 
@@ -35,12 +35,12 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
   };
 
   const calculate = (typeCurrency, amount, intoPLN) => {
-    const rate = currencies.find(({ short }) => short === typeCurrency).rate
+    const rate = currencies.rate[typeCurrency]
 
     if (intoPLN) {
       return setResult({
         firstAmount: amount,
-        finalAmount: amount * rate,
+        finalAmount: amount / rate,
         typeCurrency,
         intoPLN,
       })
@@ -48,7 +48,7 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
     else if (fromPLN) {
       return setResult({
         firstAmount: amount,
-        finalAmount: amount / rate,
+        finalAmount: amount * rate,
         typeCurrency,
         intoPLN,
       })
@@ -67,12 +67,12 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
                 name="currency"
                 value={typeCurrency}
                 onChange={onSelectChange}>
-                {currencies.map((currency => (
+                {currencies.status === "success" && Object.keys(currencies.rate).map((currency => (
                   <option
-                    key={currency.short}
-                    value={currency.short}
+                    key={currency}
+                    value={currency}
                   >
-                    {currency.name}
+                    {currency}
                   </option>
                 )))}
               </Input>
