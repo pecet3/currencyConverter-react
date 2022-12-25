@@ -10,6 +10,7 @@ import {
   Button,
   Label,
   RadioElement,
+  Status
 } from "./styled.js";
 import { useCurrencies } from "../useCurrencies.js";
 
@@ -55,74 +56,84 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
     }
   };
 
+  if (currencies.status === "loading") {
+    return <Status> Proszę czekać, strona ładuje się </Status>
+  }
+
+  if (currencies.status === "error") {
+    return <Status error>
+      Ups... wystąpiło coś nie tak. Proszę sprawdź swoje połączenie z internetem.
+      Jeśli jest prawidłowe, problem leży po naszej stronie
+    </Status>
+  }
   return (
     <>
-        <StyledForm onSubmit={onSubmitForm}>
-          <Fieldset>
-            <Legend>Wybierz walutę do obliczeń</Legend>
-            <Container>
-              <LabelText>Waluta:</LabelText>
-              <Input 
-                as="select"
-                name="currency"
-                value={typeCurrency}
-                onChange={onSelectChange}>
-                {currencies.status === "success" && Object.keys(currencies.rate).map((currency => (
-                  <option
-                    key={currency}
-                    value={currency}
-                  >
-                    {currency}
-                  </option>
-                )))}
-              </Input>
-            </Container>
-          </Fieldset>
-          <Fieldset>
-            <Legend>
-              Wpisz swój kapitał do przeliczenia
-            </Legend>
-            <Container currency>
-                <LabelText currency>
-                  Jaką walutę posiadasz?
-                </LabelText>
-                <Label radio>
-                  <RadioElement>
-                    <input
-                      type="radio"
-                      name="operationType"
-                      onChange={onRadioChange}
-                      checked={fromPLN}
-                    />
-                    PLN
-                  </RadioElement>
-                  <RadioElement>
-                    <input
-                      type="radio"
-                      name="operationType"
-                      onChange={onRadioChange}
-                      checked={intoPLN}
-                    />
-                    {typeCurrency}
-                  </RadioElement>
-                </Label>
-            </Container>
-            <Label>
-              <Container>
-                  <LabelText>Ilość:</LabelText>
-                  <Input
-                    type="number"
-                    className="form__field"
-                    min="0.00"
-                    step="0.01"
-                    value={amount}
-                    onChange={onInputChange} />
-                <Button>Oblicz Wynik</Button>
-              </Container>
+      <StyledForm onSubmit={onSubmitForm}>
+        <Fieldset>
+          <Legend>Wybierz walutę do obliczeń</Legend>
+          <Container>
+            <LabelText>Waluta:</LabelText>
+            <Input
+              as="select"
+              name="currency"
+              value={typeCurrency}
+              onChange={onSelectChange}>
+              {currencies.status === "success" && Object.keys(currencies.rate).map((currency => (
+                <option
+                  key={currency}
+                  value={currency}
+                >
+                  {currency}
+                </option>
+              )))}
+            </Input>
+          </Container>
+        </Fieldset>
+        <Fieldset>
+          <Legend>
+            Wpisz swój kapitał do przeliczenia
+          </Legend>
+          <Container currency>
+            <LabelText currency>
+              Jaką walutę posiadasz?
+            </LabelText>
+            <Label radio>
+              <RadioElement>
+                <input
+                  type="radio"
+                  name="operationType"
+                  onChange={onRadioChange}
+                  checked={fromPLN}
+                />
+                PLN
+              </RadioElement>
+              <RadioElement>
+                <input
+                  type="radio"
+                  name="operationType"
+                  onChange={onRadioChange}
+                  checked={intoPLN}
+                />
+                {typeCurrency}
+              </RadioElement>
             </Label>
-          </Fieldset>
-          <DataInfo>*kursy pochodzą z dnia 06.12.2022</DataInfo>
-        </StyledForm>
+          </Container>
+          <Label>
+            <Container>
+              <LabelText>Ilość:</LabelText>
+              <Input
+                type="number"
+                className="form__field"
+                min="0.00"
+                step="0.01"
+                value={amount}
+                onChange={onInputChange} />
+              <Button>Oblicz Wynik</Button>
+            </Container>
+          </Label>
+        </Fieldset>
+        <DataInfo>*kursy pochodzą z dnia 06.12.2022</DataInfo>
+      </StyledForm>
     </>
   )
 
