@@ -10,5 +10,5 @@ export const Container = styled.div`
 `;
 
 export const Element = styled.li`
-    padding: 7px 0;
+    padding: 7px 5px;
 `;
