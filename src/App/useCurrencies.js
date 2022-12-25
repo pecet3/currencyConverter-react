@@ -7,7 +7,7 @@ export const useCurrencies = () => {
     });
 
     useEffect(() => {
-        (async () => {
+        const getCurrencies = async () => {
             try {
                 const response = await axios.get(
                     "https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,CZK,CHF,GBP,JPY,AUD,CAD,SEK,UAH"
@@ -22,7 +22,8 @@ export const useCurrencies = () => {
                     status: "error"
                 });
             }
-        })();
+        };
+        setTimeout(getCurrencies, 1000)
     }, []);
 
 
