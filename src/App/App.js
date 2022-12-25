@@ -15,7 +15,6 @@ function App() {
   const [intoPLN, setIntoPLN] = useState(true);
   const [showRates, setShowRates] = useState(false);
 
-
   return (
     <>
       <Header title="Kalkulator walut" />
