@@ -21,7 +21,7 @@ const List = () => {
     {currencies.status === "success" && 
     Object.keys(currencies.rate).map((currency => (
       <Element key={currency}>
-        1 PLN = <strong>{(currencies.rate[currency]).toFixed(2)}</strong> {currency}
+        1 {currency} = <strong>{(1 / (currencies.rate[currency])).toFixed(2)}</strong> PLN
       </Element>
     )))}
   </Container>

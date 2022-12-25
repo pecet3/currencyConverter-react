@@ -132,7 +132,7 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
             </Container>
           </Label>
         </Fieldset>
-        <DataInfo>*kursy pochodzą z dnia 06.12.2022</DataInfo>
+        <DataInfo>*kursy pochodzą z {currencies.date}, źródło: exchangerate.host</DataInfo>
       </StyledForm>
     </>
   )
