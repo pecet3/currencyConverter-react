@@ -128,7 +128,7 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
             </Container>
           </Label>
         </Fieldset>
-        <DataInfo>*kursy pochodzą z {currencies.date}, źródło: <a href="https://exchangerate.host/">exchangerate.host</a></DataInfo>
+        <DataInfo>*kursy pochodzą z dnia {currencies.date}, źródło: <a href="https://exchangerate.host/">exchangerate.host</a></DataInfo>
       </StyledForm>
     </>
   )
