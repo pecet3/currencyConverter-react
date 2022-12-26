@@ -12,7 +12,7 @@ import {
   RadioElement,
 } from "./styled.js";
 import { useCurrencies } from "../useCurrencies.js";
-import { Status } from "../Status/index.js";
+import { StatusLoading, StatusError } from "../Status/index.js";
 
 const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setResult, setIntoPLN }) => {
   const currencies = useCurrencies();
@@ -55,17 +55,13 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
       })
     }
   };
-
   if (currencies.status === "loading") {
-    return <Status> Proszę czekać, strona ładuje się </Status>
-  }
+    return <StatusLoading/>
+  };
 
   if (currencies.status === "error") {
-    return <Status error>
-      Ups... wystąpiło coś nie tak. Proszę sprawdź swoje połączenie z internetem.
-      Jeśli jest prawidłowe, problem leży po naszej stronie
-    </Status>
-  }
+    return  <StatusError/>
+  };
   return (
     <>
       <StyledForm onSubmit={onSubmitForm}>

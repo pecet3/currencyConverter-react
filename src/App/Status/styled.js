@@ -2,7 +2,7 @@ import styled, {css} from "styled-components";
 
 export const Container = styled.div`
     text-align:center;
-    min-height: 420px;
+    min-height: 425px;
     padding-top: 150px;
     ${({ error })=> error && css`
         font-size: 18px;
@@ -10,5 +10,6 @@ export const Container = styled.div`
     `}
     ${({ list })=> list && css`
         min-height: 0;
+        padding-top: 0;
     `}
 `;
