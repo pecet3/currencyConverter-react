@@ -116,10 +116,3 @@ export const RadioElement = styled.span`
     margin-right: 5px;
 `;
 
-export const Status = styled.div`
-    text-align:center;
-    ${({ error })=> error && css`
-        font-size: 18px;
-        color: ${({theme})=>theme.colors.shiraz}
-    `}
-`;

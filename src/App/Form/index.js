@@ -10,9 +10,9 @@ import {
   Button,
   Label,
   RadioElement,
-  Status
 } from "./styled.js";
 import { useCurrencies } from "../useCurrencies.js";
+import { Status } from "../Status/index.js";
 
 const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setResult, setIntoPLN }) => {
   const currencies = useCurrencies();
@@ -132,7 +132,7 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
             </Container>
           </Label>
         </Fieldset>
-        <DataInfo>*kursy pochodzą z {currencies.date}, źródło: exchangerate.host</DataInfo>
+        <DataInfo>*kursy pochodzą z {currencies.date}, źródło: <a href="https://exchangerate.host/">exchangerate.host</a></DataInfo>
       </StyledForm>
     </>
   )
