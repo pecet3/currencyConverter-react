@@ -74,7 +74,7 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
               name="currency"
               value={typeCurrency}
               onChange={onSelectChange}>
-              {currencies.status === "success" && Object.keys(currencies.rate).map((currency => (
+              {Object.keys(currencies.rate).map((currency => (
                 <option
                   key={currency}
                   value={currency}
