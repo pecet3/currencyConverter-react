@@ -2,7 +2,7 @@
 
 Hi, this is the 2nd version of my [currency-converter-PLN-](https://github.com/pecet3/currency-converter-PLN-).
 I make it during frontend course, so update this project almost everyday.
-I am planning add Web API of the National Bank of Poland.
+This converter takes data from the [Public API](https://exchangerate.host/#/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -14,6 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - create-react-app
 - Styled Components
 - Google Fonts
+- Axios
 - GIMP ;)
 #
 
