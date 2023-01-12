@@ -20,7 +20,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Screenshots
 
-### Computer View
+### Desktop View
 ![](readme_images/screenshot_computer.gif)
 
 
