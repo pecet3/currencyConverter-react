@@ -2,7 +2,7 @@
 
 Hi, this is the 2nd version of my [currency-converter-PLN-](https://github.com/pecet3/currency-converter-PLN-).
 I make it during frontend course, so update this project almost everyday.
-This converter takes data from the [Public API](https://exchangerate.host/#/).
+This converter takes data from the [Public API](https://exchangerate.host/#/) and targets to polish users.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -20,7 +20,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Screenshots
 
-### Computer View
+### Desktop View
 ![](readme_images/screenshot_computer.gif)
 
 
