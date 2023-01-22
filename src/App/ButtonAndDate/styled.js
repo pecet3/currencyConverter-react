@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    background-color: ${({theme})=>theme.colors.veryTransparentBlack};
+    background-color: ${({ theme }) => theme.colors.veryTransparentBlack};
     border-radius: 8px;
     padding: 8px;
     margin-top: 5px;
@@ -10,7 +10,7 @@ export const Container = styled.div`
     grid-template-columns: 1fr 4fr;
     align-items: center;
 
-    @media(max-width:${({theme})=> theme.breakpoints.mobile}px){
+    @media(max-width:${({ theme }) => theme.breakpoints.mobile}px){
         grid-template-columns: 1fr;
         grid-gap: 7px;
     }
@@ -19,7 +19,7 @@ export const Container = styled.div`
 export const Button = styled.button`
     border: none;
     padding: 5px;
-    background-color: ${({theme})=>theme.colors.lightGrey};
+    background-color: ${({ theme }) => theme.colors.lightGrey};
     border-radius: 7px;
     font-weight: 600;
     font-size: 12px;

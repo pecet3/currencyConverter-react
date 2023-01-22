@@ -14,7 +14,7 @@ export const Legend = styled.legend`
 export const Fieldset = styled.fieldset`
     padding: 20px;
     border-radius: 10px;
-    background-color: ${({theme})=> theme.colors.almond};
+    background-color: ${({ theme }) => theme.colors.almond};
     margin: 20px auto;
 `;
 
@@ -24,8 +24,8 @@ export const Input = styled.input`
     font-size: 17px;
     font-weight: 500;
     color: rgb(41, 41, 41);
-    background-color: ${({theme})=> theme.colors.blueGrey};
-    border: 2px double ${({theme})=> theme.colors.darkBlueGrey};
+    background-color: ${({ theme }) => theme.colors.blueGrey};
+    border: 2px double ${({ theme }) => theme.colors.darkBlueGrey};
     border-radius: 5px;
     width: 200px;
 `;
@@ -79,7 +79,7 @@ export const Button = styled.button`
     max-width: 200px;
     padding: 10px;
     border: none;
-    background-color: ${({theme})=> theme.colors.darkAlmond};;
+    background-color: ${({ theme }) => theme.colors.darkAlmond};;
     border-radius: 5px;
     color: rgb(0, 0, 0);
     transition: .3s;

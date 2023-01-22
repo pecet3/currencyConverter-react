@@ -1,6 +1,6 @@
-import {Container} from "./styled.js";
+import { Container } from "./styled.js";
 
-const Section = ({content}) => (
+const Section = ({ content }) => (
     <Container>
         {content}
     </Container>

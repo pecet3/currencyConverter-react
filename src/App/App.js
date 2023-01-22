@@ -22,7 +22,7 @@ function App() {
         <ButtonAndDate
           showRates={showRates}
           setShowRates={setShowRates}
-          
+
         />
         <Section
           content={showRates ? <List /> : ""}

@@ -11,7 +11,7 @@ export const useCurrencies = () => {
             try {
                 const response = await axios.get(
                     "https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,CZK,CHF,GBP,JPY,AUD,CAD,SEK,UAH"
-                    );
+                );
                 setCurrencies({
                     date: response.data.date,
                     rate: response.data.rates,
@@ -25,7 +25,6 @@ export const useCurrencies = () => {
         };
         setTimeout(getCurrencies, 1000)
     }, []);
-
 
     return currencies;
 };

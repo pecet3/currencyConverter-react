@@ -20,11 +20,11 @@ const useCurrentDate = () => {
 
 const Clock = () => {
     const date = useCurrentDate();
-   
+
     return (
         <>
-        <Container>
-            {`${date.toLocaleDateString
+            <Container>
+                {`${date.toLocaleDateString
                     (undefined,
                         {
                             weekday: "long",
@@ -36,7 +36,7 @@ const Clock = () => {
                             second: "numeric"
                         })}
                  `}
-        </Container>
+            </Container>
         </>
     )
 };
