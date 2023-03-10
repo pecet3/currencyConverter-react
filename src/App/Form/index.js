@@ -56,11 +56,11 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
     }
   };
   if (currencies.status === "loading") {
-    return <StatusLoading/>
+    return <StatusLoading />
   };
 
   if (currencies.status === "error") {
-    return  <StatusError/>
+    return <StatusError />
   };
   return (
     <>
@@ -119,7 +119,6 @@ const Form = ({ amount, typeCurrency, intoPLN, setTypeCurrency, setAmount, setRe
               <LabelText>Ilość:</LabelText>
               <Input
                 type="number"
-                className="form__field"
                 min="0.00"
                 step="0.01"
                 value={amount}
